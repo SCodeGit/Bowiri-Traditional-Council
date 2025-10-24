@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bowiri Traditional Council</title>
+  <meta name="description" content="Official site of the Bowiri Traditional Council — heritage, leadership, festivals and community support." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">
+        <img src="images/logo-placeholder.png" alt="Bowiri Seal" class="logo"> 
+        <span class="brand-text">Bowiri Traditional Council</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav id="main-nav" class="main-nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#council" class="nav-link">The Council</a>
+        <a href="#news" class="nav-link">News & Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / HOME -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1 class="reveal">Welcome to the Bowiri Traditional Council</h1>
+        <p class="lead reveal">Custodians of Bowiri heritage — preserving tradition and serving the community.</p>
+        <a href="#council" class="btn reveal">Learn about the Council</a>
+      </div>
+    </section>
+
+    <!-- THE COUNCIL -->
+    <section id="council" class="section council">
+      <div class="container">
+        <h2 class="section-title reveal">The Council</h2>
+        <p class="reveal">The Bowiri Traditional Council traces its history through generations of leadership, guardianship of culture, and community service.</p>
+
+        <div class="leadership-grid">
+          <article class="card reveal">
+            <img src="images/chief-placeholder.jpg" alt="Paramount Chief">
+            <h3>Paramount Chief</h3>
+            <p>His Majesty the Paramount Chief — custodian of the stool and ceremonial leader.</p>
+          </article>
+          <article class="card reveal">
+            <img src="images/queen-placeholder.jpg" alt="Queen Mother">
+            <h3>Queen Mother</h3>
+            <p>The Queen Mother — custodian of traditions and community welfare.</p>
+          </article>
+          <article class="card reveal">
+            <img src="images/elders-placeholder.jpg" alt="Council Elders">
+            <h3>Council of Elders</h3>
+            <p>Senior elders and divisional chiefs who advise the Paramount Chief.</p>
+          </article>
+        </div>
+
+        <hr>
+
+        <div class="support reveal">
+          <h3>Support the Welfare of Our People</h3>
+          <p>Your contribution helps fund community projects — schools, clean water, healthcare outreach and cultural preservation.</p>
+          <div class="support-buttons">
+            <a class="btn" href="#contact">Give Support</a>
+            <a class="btn ghost" href="#projects">See Projects</a>
+          </div>
+          <p class="small-note">Alternatively you may reach us by bank transfer or drop a cheque at the palace office. Contact details below.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS & CONTACT -->
+    <section id="news" class="section news-contact">
+      <div class="container">
+        <div class="news-col reveal">
+          <h2 class="section-title">Latest Announcements</h2>
+          <article class="news-item">
+            <h3>Festival Date Confirmed</h3>
+            <p>Bowiri Yam Festival will be celebrated on the last Saturday of November. Further details and programme will be published here.</p>
+          </article>
+          <article class="news-item">
+            <h3>Community Health Outreach</h3>
+            <p>The council in partnership with local clinics will run a wellness outreach next month.</p>
+          </article>
+        </div>
+
+        <aside class="contact-col reveal" id="contact">
+          <h2 class="section-title">Contact & Support</h2>
+          <form id="contact-form" class="contact-form">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" required>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+            <label for="message">Message or Support Intent</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+
+          <div class="contact-details">
+            <p><strong>Palace Office</strong></p>
+            <p>P. O. Box 123, Bowiri</p>
+            <p>Email: <a href="mailto:info@bowiri.org">info@bowiri.org</a></p>
+            <p>Phone: +233 20 000 0000</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img src="images/logo-placeholder.png" alt="Bowiri Seal" class="logo-sm">
+        <p>© <span id="year"></span> Bowiri Traditional Council — All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <p>Website crafted by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
