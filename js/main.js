@@ -1,51 +1,61 @@
-// main.js - Bowiri Royal site (reveal + nav + contact form)
-document.addEventListener('DOMContentLoaded', function(){
+// main.js — Bowiri Royal site (animated fade + reveal + nav)
+document.addEventListener('DOMContentLoaded', () => {
   // Year in footer
-  var y = document.getElementById('year');
-  if(y) y.textContent = new Date().getFullYear();
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
 
   // Mobile nav toggle
-  var navToggle = document.getElementById('nav-toggle');
-  var mainNav = document.getElementById('main-nav');
-  if(navToggle){
-    navToggle.addEventListener('click', function(){
-      var expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', !expanded);
-      if (mainNav.style.display === 'block') { mainNav.style.display = ''; }
-      else { mainNav.style.display = 'block'; }
+  const navToggle = document.getElementById('nav-toggle');
+  const mainNav = document.getElementById('main-nav');
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      mainNav.style.display = expanded ? '' : 'block';
+      mainNav.style.animation = expanded ? 'fadeOut 0.4s forwards' : 'fadeIn 0.4s forwards';
     });
   }
 
-  // Smooth anchor scroll for same-page anchors
-  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
-    anchor.addEventListener('click', function(e){
-      var target = document.querySelector(this.getAttribute('href'));
-      if (target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); 
-        if(window.innerWidth < 720 && mainNav && mainNav.style.display === 'block'){ mainNav.style.display = ''; }
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (window.innerWidth < 720 && mainNav && mainNav.style.display === 'block') {
+          mainNav.style.display = '';
+        }
       }
     });
   });
 
-  // Reveal on scroll (IntersectionObserver)
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
+  // Reveal animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         entry.target.classList.add('in-view');
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
         observer.unobserve(entry.target);
       }
     });
-  }, {threshold: 0.12});
-  document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Simple contact form handler
-  var form = document.getElementById('contact-form');
-  if(form){
-    form.addEventListener('submit', function(e){
+  // Contact form
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', e => {
       e.preventDefault();
-      alert('Thank you — your message has been noted. Please contact the palace for donation instructions.');
+      alert('Your message has been received. The palace will reach out soon.');
       form.reset();
     });
   }
 });
+
+// Extra keyframes for fade
+const style = document.createElement('style');
+style.textContent = `
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+@keyframes fadeOut { from { opacity: 1 } to { opacity: 0 } }
+`;
+document.head.appendChild(style);
