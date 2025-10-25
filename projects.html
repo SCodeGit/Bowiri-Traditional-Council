@@ -20,7 +20,7 @@
     <nav id="main-nav" class="main-nav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="projects.html" class="nav-link">Projects & Support</a>
+      <a href="projects.html" class="nav-link active">Projects & Support</a>
       <a href="leadership.html" class="nav-link">Leadership</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
@@ -33,33 +33,74 @@
   </section>
 
   <section class="page-content">
-<div class="content-block reveal">
-  <h2>Projects & Support</h2>
-  <p>The Bowiri Foundation runs projects in education, water, healthcare and cultural preservation. Below are ongoing initiatives and how you can support them.</p>
+    <div class="content-block reveal">
+      <h2>Community Projects & Initiatives</h2>
+      <p>The Bowiri Traditional Council continues to promote development across education, health, and culture. Below are key projects currently ongoing, with opportunities for public support.</p>
 
-  <div class="project-list">
-    <article class="project-card reveal">
-      <h3>School Renovation — Bowiri Primary</h3>
-      <p>Renovating classrooms and providing learning materials for 450 pupils.</p>
-    </article>
-    <article class="project-card reveal">
-      <h3>Clean Water Supply</h3>
-      <p>Drilling and maintaining boreholes in remote communities.</p>
-    </article>
-    <article class="project-card reveal">
-      <h3>Health Outreach</h3>
-      <p>Mobile clinics and vaccination drives across the traditional area.</p>
-    </article>
-  </div>
+      <div class="project-list">
+        <article class="project-card reveal" style="background-image:url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/b440f76a804220755581f42fa8cf169b.jpg');background-size:cover;background-position:center;">
+          <div class="overlay-card"></div>
+          <h3>School Renovation — Bowiri Primary</h3>
+          <p>Upgrading classrooms and learning materials for over 450 pupils to ensure a brighter future for Bowiri’s children.</p>
+        </article>
 
-  <div class="donation-box reveal">
-    <h3>Support the Welfare of Our People</h3>
-    <p>Your gifts help sustain the projects above. Use the details below to contribute or contact the palace for mobile money instructions.</p>
-    <p><strong>Bank:</strong> Bowiri Unity Bank — <strong>Account:</strong> Bowiri Foundation — <strong>Account No:</strong> 0000000000</p>
-    <p>For card payments or online support, contact the palace office or email <a href="mailto:info@bowiri.org">info@bowiri.org</a>.</p>
-  </div>
-</div>
+        <article class="project-card reveal" style="background-image:url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/image-82-1024x683.png');background-size:cover;background-position:center;">
+          <div class="overlay-card"></div>
+          <h3>Clean Water Initiative</h3>
+          <p>Drilling boreholes and maintaining safe drinking water systems in remote communities.</p>
+        </article>
 
+        <article class="project-card reveal" style="background-image:url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/durbar-of-chiefs.jpg');background-size:cover;background-position:center;">
+          <div class="overlay-card"></div>
+          <h3>Health Outreach Programme</h3>
+          <p>Organizing mobile clinics and vaccination campaigns in partnership with district health services.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- === Donation Section === -->
+    <section class="donation-section reveal">
+      <h2>Support the Bowiri Welfare Fund</h2>
+      <p>Your contribution helps sustain our educational, health, and cultural projects. Choose your preferred donation method below:</p>
+
+      <div class="donate-tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="bank">🏦 Bank</button>
+          <button class="tab-btn" data-tab="momo">📱 Mobile Money</button>
+          <button class="tab-btn" data-tab="visa">💳 Card / Online</button>
+        </div>
+
+        <div class="tab-content active" id="bank">
+          <h4>Bank Transfer</h4>
+          <p><strong>Bank:</strong> Bowiri Unity Bank</p>
+          <p><strong>Account Name:</strong> Bowiri Traditional Council Foundation</p>
+          <p><strong>Account Number:</strong> 0000000000</p>
+          <p><strong>Branch:</strong> Jasikan Main</p>
+        </div>
+
+        <div class="tab-content" id="momo">
+          <h4>Mobile Money (MoMo)</h4>
+          <label for="momo-select">Select Network:</label>
+          <select id="momo-select">
+            <option value="mtn">MTN MoMo</option>
+            <option value="vodafone">Vodafone Cash</option>
+            <option value="airteltigo">AirtelTigo Money</option>
+          </select>
+
+          <div id="momo-details" class="momo-box">
+            <p><strong>Network:</strong> MTN MoMo</p>
+            <p><strong>Name:</strong> Bowiri Traditional Council</p>
+            <p><strong>Number:</strong> 024 987 1234</p>
+          </div>
+        </div>
+
+        <div class="tab-content" id="visa">
+          <h4>Online Donation</h4>
+          <p>Donate securely via Paystack or Flutterwave.</p>
+          <a href="#" class="btn">Donate via Paystack</a>
+        </div>
+      </div>
+    </section>
   </section>
 </main>
 
@@ -76,5 +117,41 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<!-- Donation Tabs JS -->
+<script>
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  const momoSelect = document.getElementById('momo-select');
+  const momoDetails = document.getElementById('momo-details');
+  momoSelect.addEventListener('change', () => {
+    const value = momoSelect.value;
+    if (value === 'mtn') {
+      momoDetails.innerHTML = `
+        <p><strong>Network:</strong> MTN MoMo</p>
+        <p><strong>Name:</strong> Bowiri Traditional Council</p>
+        <p><strong>Number:</strong> 024 987 1234</p>`;
+    } else if (value === 'vodafone') {
+      momoDetails.innerHTML = `
+        <p><strong>Network:</strong> Vodafone Cash</p>
+        <p><strong>Name:</strong> Bowiri Traditional Council</p>
+        <p><strong>Number:</strong> 050 765 4321</p>`;
+    } else {
+      momoDetails.innerHTML = `
+        <p><strong>Network:</strong> AirtelTigo Money</p>
+        <p><strong>Name:</strong> Bowiri Traditional Council</p>
+        <p><strong>Number:</strong> 027 888 1111</p>`;
+    }
+  });
+</script>
 </body>
 </html>
