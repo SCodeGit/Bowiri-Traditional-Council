@@ -1,18 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects & Support — Bowiri Traditional Council</title>
   <meta name="description" content="Bowiri Traditional Council — heritage, leadership, projects and community support." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/king%20logo.jpg">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- ===== HEADER ===== -->
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="brand">
-      <div class="logo-btc">BTC</div>
+      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/king%20logo.jpg" alt="Bowiri logo" class="logo-img">
       <span class="brand-text">Bowiri Traditional Council</span>
     </a>
 
@@ -27,11 +36,13 @@
   </div>
 </header>
 
-<main class="page-main container">
-  <section class="page-header reveal">
-    <h1>Projects & Support</h1>
-  </section>
+<!-- ===== HERO ===== -->
+<section class="page-header reveal" style="background: linear-gradient(rgba(10,0,0,0.6), rgba(0,0,0,0.6)), url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/durbar-of-chiefs.jpg') center/cover;">
+  <h1>Projects & Support</h1>
+</section>
 
+<!-- ===== PROJECT CONTENT ===== -->
+<main class="page-main container">
   <section class="page-content">
     <div class="content-block reveal">
       <h2>Community Projects & Initiatives</h2>
@@ -57,101 +68,106 @@
         </article>
       </div>
     </div>
+  </section>
 
-    <!-- === Donation Section === -->
-    <section class="donation-section reveal">
-      <h2>Support the Bowiri Welfare Fund</h2>
-      <p>Your contribution helps sustain our educational, health, and cultural projects. Choose your preferred donation method below:</p>
+  <!-- ===== DONATION SECTION ===== -->
+  <section class="section container reveal">
+    <h3 class="section-title">Ways to Support</h3>
+    <p class="intro">Choose your preferred donation channel — every contribution sustains Bowiri’s vision.</p>
 
-      <div class="donate-tabs">
-        <div class="tab-buttons">
-          <button class="tab-btn active" data-tab="bank">🏦 Bank</button>
-          <button class="tab-btn" data-tab="momo">📱 Mobile Money</button>
-          <button class="tab-btn" data-tab="visa">💳 Card / Online</button>
-        </div>
+    <div class="donate-options">
+      <button class="btn donate-btn" data-modal="bankModal">🏦 Donate via Bank</button>
+      <button class="btn donate-btn" data-modal="momoModal">📱 Donate via MoMo</button>
+      <button class="btn donate-btn" data-modal="cardModal">💳 Donate Online</button>
+    </div>
+  </section>
 
-        <div class="tab-content active" id="bank">
-          <h4>Bank Transfer</h4>
-          <p><strong>Bank:</strong> Bowiri Unity Bank</p>
-          <p><strong>Account Name:</strong> Bowiri Traditional Council Foundation</p>
-          <p><strong>Account Number:</strong> 0000000000</p>
-          <p><strong>Branch:</strong> Jasikan Main</p>
-        </div>
+  <!-- ===== MODALS ===== -->
+  <div id="bankModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h4>Bank Transfer Details</h4>
+      <p><strong>Bank:</strong> GCB Bank</p>
+      <p><strong>Account Name:</strong> Bowiri Traditional Council</p>
+      <p><strong>Account Number:</strong> 0123456789</p>
+      <p><strong>Branch:</strong> Jasikan</p>
+      <p>Use your name as a reference when making a transfer.</p>
+    </div>
+  </div>
 
-        <div class="tab-content" id="momo">
-          <h4>Mobile Money (MoMo)</h4>
-          <label for="momo-select">Select Network:</label>
-          <select id="momo-select">
-            <option value="mtn">MTN MoMo</option>
-            <option value="vodafone">Vodafone Cash</option>
-            <option value="airteltigo">AirtelTigo Money</option>
-          </select>
+  <div id="momoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h4>Mobile Money Donation</h4>
+      <p><strong>MTN MoMo:</strong> 024 123 4567 — Bowiri Traditional Council</p>
+      <p><strong>Vodafone Cash:</strong> 050 987 6543</p>
+      <p><strong>AirtelTigo Money:</strong> 027 555 7890</p>
+    </div>
+  </div>
 
-          <div id="momo-details" class="momo-box">
-            <p><strong>Network:</strong> MTN MoMo</p>
-            <p><strong>Name:</strong> Bowiri Traditional Council</p>
-            <p><strong>Number:</strong> 024 987 1234</p>
-          </div>
-        </div>
+  <div id="cardModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h4>Donate Online (Card)</h4>
+      <p>Make a secure online donation through Paystack or Flutterwave.</p>
+      <a href="#" target="_blank" class="btn">Proceed to Payment</a>
+    </div>
+  </div>
 
-        <div class="tab-content" id="visa">
-          <h4>Online Donation</h4>
-          <p>Donate securely via Paystack or Flutterwave.</p>
-          <a href="#" class="btn">Donate via Paystack</a>
-        </div>
-      </div>
-    </section>
+  <!-- ===== WELCOME LEADERSHIP LINK ===== -->
+  <section class="welcome-leadership">
+    <div class="container reveal">
+      <h3>Welcome to the Bowiri Traditional Area</h3>
+      <p>Discover the esteemed leadership guiding our vision, promoting peace and development across the Bowiri communities.</p>
+      <a href="leadership.html" class="btn royal">Meet the Leadership</a>
+    </div>
   </section>
 </main>
 
+<!-- ===== FOOTER ===== -->
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-left">
-      <div class="logo-sm">BTC</div>
-      <p>© <span id="year"></span> Bowiri Traditional Council — All rights reserved.</p>
+      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/king%20logo.jpg" alt="Bowiri logo" class="footer-logo">
+      <p>© <span id="year"></span> Bowiri Traditional Council. All Rights Reserved.</p>
     </div>
     <div class="footer-right">
-      <p>Website crafted by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
+      <p>Crafted by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
     </div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<button id="topBtn" title="Back to top">↑</button>
 
-<!-- Donation Tabs JS -->
+<!-- ===== JS ===== -->
 <script>
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      tabContents.forEach(c => c.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById(btn.dataset.tab).classList.add('active');
-    });
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('main-nav');
+  toggle.addEventListener('click', () => nav.classList.toggle('active'));
+
+  const modals = document.querySelectorAll('.modal');
+  const openBtns = document.querySelectorAll('.donate-btn');
+  const closeBtns = document.querySelectorAll('.close');
+
+  openBtns.forEach(btn => {
+    btn.onclick = () => {
+      document.getElementById(btn.dataset.modal).style.display = "block";
+    };
   });
 
-  const momoSelect = document.getElementById('momo-select');
-  const momoDetails = document.getElementById('momo-details');
-  momoSelect.addEventListener('change', () => {
-    const value = momoSelect.value;
-    if (value === 'mtn') {
-      momoDetails.innerHTML = `
-        <p><strong>Network:</strong> MTN MoMo</p>
-        <p><strong>Name:</strong> Bowiri Traditional Council</p>
-        <p><strong>Number:</strong> 024 987 1234</p>`;
-    } else if (value === 'vodafone') {
-      momoDetails.innerHTML = `
-        <p><strong>Network:</strong> Vodafone Cash</p>
-        <p><strong>Name:</strong> Bowiri Traditional Council</p>
-        <p><strong>Number:</strong> 050 765 4321</p>`;
-    } else {
-      momoDetails.innerHTML = `
-        <p><strong>Network:</strong> AirtelTigo Money</p>
-        <p><strong>Name:</strong> Bowiri Traditional Council</p>
-        <p><strong>Number:</strong> 027 888 1111</p>`;
-    }
+  closeBtns.forEach(btn => {
+    btn.onclick = () => {
+      btn.closest('.modal').style.display = "none";
+    };
   });
+
+  window.onclick = function(event) {
+    modals.forEach(modal => {
+      if (event.target == modal) modal.style.display = "none";
+    });
+  };
 </script>
 </body>
 </html>
