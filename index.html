@@ -1,151 +1,325 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Home — Bowiri Traditional Council</title>
   <meta name="description" content="Bowiri Traditional Council — heritage, leadership, projects and community support." />
-
-  <!-- ✅ Google Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
 
   <!-- ✅ Favicon -->
   <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg">
 
   <style>
-    /* --- Custom Header Overwrite --- */
-    header.site-header {
-      background-color: #0f1111;
-      border-bottom: 2px solid #444;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
+    :root {
+      --royal-blue: #001f3f;
+      --gold: #c6a567;
+      --white: #ffffff;
+      --overlay-dark: rgba(0, 0, 0, 0.4);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--royal-blue);
+      color: var(--white);
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      background: var(--royal-blue);
+      color: var(--white);
+      border-bottom: 2px solid var(--gold);
+      padding: 10px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    .logo-link {
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
       display: flex;
       align-items: center;
       text-decoration: none;
+      color: var(--white);
     }
 
-    .logo-link img {
-      width: 45px;
-      height: 45px;
+    .brand img {
+      width: 55px;
+      height: 55px;
       border-radius: 50%;
       margin-right: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .logo-link img:hover {
-      transform: scale(1.1);
+      border: 2px solid var(--gold);
     }
 
     .brand-text {
-      font-family: "Playfair Display", serif;
-      color: #fff;
-      font-size: 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    #nav-toggle {
+      font-size: 1.8rem;
+      background: none;
+      color: var(--white);
+      border: none;
+      display: none;
+      cursor: pointer;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .main-nav a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      #nav-toggle {
+        display: block;
+      }
+
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        background: var(--royal-blue);
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      .main-nav.active {
+        display: flex;
+      }
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
+      url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/35640ee45f84a217bdedf3ca4d4b45de0cab3731/images/maxresdefault.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 120px 20px;
+      color: var(--white);
+      position: relative;
+    }
+
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      color: #ddd;
+    }
+
+    .hero a.btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: var(--gold);
+      color: var(--royal-blue);
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .hero a.btn:hover {
+      background-color: var(--white);
+      color: var(--royal-blue);
+    }
+
+    /* ===== CARDS ===== */
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+      padding: 60px 5%;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--royal-blue);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.4s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--gold);
+    }
+
+    .card p {
+      padding: 0 15px 20px;
+    }
+
+    .card .link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
+      url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/35640ee45f84a217bdedf3ca4d4b45de0cab3731/images/durbar-of-chiefs.jpg') center/cover no-repeat;
+      color: var(--white);
+      padding: 40px 0;
+      text-align: center;
+      backdrop-filter: blur(4px);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+    }
+
+    .footer-right a {
+      color: var(--gold);
+      text-decoration: none;
       font-weight: 600;
     }
 
-    nav.main-nav {
-      display: flex;
-      gap: 25px;
+    #backToTop {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: var(--gold);
+      color: var(--royal-blue);
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 22px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      transition: 0.3s;
     }
 
-    nav.main-nav a {
-      color: #f0f0f0;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-
-    nav.main-nav a:hover {
-      color: #c1a45b; /* gold accent */
+    #backToTop:hover {
+      background: var(--white);
     }
   </style>
 </head>
-
 <body>
-  <!-- ✅ Clean Header -->
-  <header class="site-header">
-    <a href="index.html" class="logo-link">
-      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Traditional Area">
-      <span class="brand-text">Bowiri Traditional Council</span>
-    </a>
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="leadership.html">Leadership</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo">
+        <span class="brand-text">Bowiri Traditional Council</span>
+      </a>
+
+      <button id="nav-toggle">☰</button>
+      <nav id="main-nav" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- ✅ Hero section -->
-  <main class="page-main container">
-    <section class="page-header reveal">
-      <h1>Home</h1>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Welcome to the Bowiri Traditional Council</h2>
+    <p>Discover our rich heritage and meet our esteemed leaders.</p>
+    <a href="leadership.html" class="btn">Explore Leadership →</a>
+  </section>
 
-    <section class="page-content">
-      <div class="hero" style="background-image: linear-gradient(rgba(4,6,12,0.25), rgba(4,6,12,0.45)), url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg');">
-        <div class="hero-content reveal">
-          <h2 class="lead">Welcome to the Bowiri Traditional Council</h2>
-          <p class="lead-sub">Custodians of culture, unity, and community development.</p>
-          <a class="btn" href="about.html">Learn More</a>
-        </div>
-      </div>
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <article class="card">
+      <h3>Latest Enstoolment</h3>
+      <p>Newly enstooled chiefs bringing fresh vision to Bowiri leadership.</p>
+      <a href="leadership.html" class="link">View Leadership →</a>
+    </article>
 
-      <div class="highlights">
-        <article class="card reveal" style="background-image: url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/35640ee45f84a217bdedf3ca4d4b45de0cab3731/images/b440f76a804220755581f42fa8cf169b.jpg');">
-          <div class="overlay-card"></div>
-          <h3>Latest Enstoolment</h3>
-          <p>Official enstoolment announced. Read more in Leadership.</p>
-          <a href="leadership.html" class="link">View details →</a>
-        </article>
+    <article class="card">
+      <h3>Yam Festival</h3>
+      <p>Celebrating unity and harvest. The upcoming festival honours tradition and growth.</p>
+      <a href="projects.html" class="link">Festival & Projects →</a>
+    </article>
 
-        <article class="card reveal" style="background-image: url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/35640ee45f84a217bdedf3ca4d4b45de0cab3731/images/image-82-1024x683.png');">
-          <div class="overlay-card"></div>
-          <h3>Yam Festival</h3>
-          <p>Annual festival to celebrate harvest — programme published soon.</p>
-          <a href="projects.html" class="link">Festival & Projects →</a>
-        </article>
+    <article class="card">
+      <h3>Community Initiatives</h3>
+      <p>Education, infrastructure, and cultural renewal — our mission continues.</p>
+      <a href="projects.html" class="link">Support the Work →</a>
+    </article>
+  </section>
 
-        <article class="card reveal" style="background-image: url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/35640ee45f84a217bdedf3ca4d4b45de0cab3731/images/maxresdefault.jpg');">
-          <div class="overlay-card"></div>
-          <h3>Community Initiatives</h3>
-          <p>Education, water, and health projects funded through the foundation.</p>
-          <a href="projects.html" class="link">Support the Work →</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <!-- ✅ Footer -->
-  <footer class="site-footer" style="background-image: linear-gradient(rgba(4,6,12,0.65), rgba(4,6,12,0.85)), url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/35640ee45f84a217bdedf3ca4d4b45de0cab3731/images/durbar-of-chiefs.jpg'); background-size: cover; background-position: center;">
-    <div class="container footer-inner reveal">
-      <div class="footer-left">
-        <div class="logo-sm">Bowiri</div>
-        <p>© <span id="year"></span> Bowiri Traditional Council — All rights reserved.</p>
-      </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo" class="footer-logo">
+      <p>© <span id="year"></span> Bowiri Traditional Council — All Rights Reserved.</p>
       <div class="footer-right">
         <p>Designed by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <button id="backToTop">↑</button>
+
   <script>
-    // Update year automatically
+    // Toggle mobile nav
+    document.getElementById("nav-toggle").addEventListener("click", function () {
+      document.getElementById("main-nav").classList.toggle("active");
+    });
+
+    // Back to top
+    const backToTop = document.getElementById("backToTop");
+    window.onscroll = function () {
+      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    backToTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Year update
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
