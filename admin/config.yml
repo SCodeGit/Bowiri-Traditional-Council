@@ -1,34 +1,6 @@
-backend:
-  name: github
-  repo: SCodeGit/Bowiri-Traditional-Council
-  branch: main
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
-collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "about.md"
-        label: "About Us"
-        name: "about"
-        fields:
-          - { name: "title", label: "Title" }
-          - { name: "content", label: "Content", widget: "markdown" }
-      - file: "projects.md"
-        label: "Projects"
-        name: "projects"
-        fields:
-          - { name: "title", label: "Title" }
-          - { name: "content", label: "Content", widget: "markdown" }
-      - file: "leadership.md"
-        label: "Leadership"
-        name: "leadership"
-        fields:
-          - { name: "title", label: "Title" }
-          - { name: "content", label: "Content", widget: "markdown" }
-      - file: "contact.md"
-        label: "Contact"
-        name: "contact"
-        fields:
-          - { name: "title", label: "Title" }
-          - { name: "content", label: "Content", widget: "markdown" }
+- file: "content/index.md"
+  label: "Home Page"
+  name: "home"
+  fields:
+    - { name: "title", label: "Title" }
+    - { name: "content", label: "Content", widget: "markdown" }
