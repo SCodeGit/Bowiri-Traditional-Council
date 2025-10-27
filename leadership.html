@@ -160,34 +160,55 @@
     }
   </style>
 <header class="site-header">
-  <div class="container header-inner">
+  <div class="container header-inner" style="text-align:center; margin-top:10px;">
     <a href="index.html" class="brand">
       <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" 
            alt="Bowiri Logo" class="logo-btc" 
            style="width:56px; height:56px; border-radius:8px; object-fit:cover;">
-      <span class="brand-text">Bowiri Traditional Council</span>
+      <span class="brand-text" style="font-weight:bold; font-size:1.3em; display:block; margin-top:5px;">Bowiri Traditional Council</span>
     </a>
-
-    <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">☰</button>
-    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="projects.html" class="nav-link">Projects & Support</a>
-      <a href="leadership.html" class="nav-link active">Leadership</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
   </div>
 </header>
-<!-- Navigation Bar under Logo -->
+
+<!-- Horizontal Navigation Bar under Logo -->
 <nav id="page-nav" style="text-align:center; margin-top:10px;">
   <ul style="list-style:none; padding:0; margin:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px;">
-    <li><a href="index.html" style="text-decoration:none; color:#4B0082; font-weight:bold; font-size:1.1em;">Home</a></li>
-    <li><a href="about.html" style="text-decoration:none; color:#4B0082; font-weight:bold; font-size:1.1em;">About</a></li>
-    <li><a href="leadership.html" style="text-decoration:none; color:#4B0082; font-weight:bold; font-size:1.1em;">Leadership</a></li>
-    <li><a href="projects.html" style="text-decoration:none; color:#4B0082; font-weight:bold; font-size:1.1em;">Projects</a></li>
-    <li><a href="contact.html" style="text-decoration:none; color:#4B0082; font-weight:bold; font-size:1.1em;">Contact</a></li>
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+    <li><a href="projects.html" class="nav-link">Projects</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
   </ul>
 </nav>
+
+<!-- Styles for navigation links -->
+<style>
+  #page-nav .nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    background: linear-gradient(to right, #FFD700, #FF4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  #page-nav .nav-link:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    #page-nav ul {
+      gap: 10px;
+    }
+    #page-nav .nav-link {
+      font-size: 0.9em;
+    }
+  }
+</style>
+
 
 <main class="page-main container">
   <section class="page-header">
