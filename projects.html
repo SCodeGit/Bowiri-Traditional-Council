@@ -67,4 +67,65 @@
 
         <div class="project-card reveal">
           <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=800&q=80" alt="Cultural Center" style="width:100%;border-radius:8px;">
-          <h3>3. Bowiri Cultural Heritage Center</
+          <h3>3. Bowiri Cultural Heritage Center</h3>
+          <p>A preservation hub for local art, history, and oral traditions. The center promotes cultural pride, tourism, and serves as a resource for youth education.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT / DONATION SECTION -->
+    <section id="support" class="content-block donation-box reveal">
+      <h2>Support Our Developmental Vision</h2>
+      <p>Every contribution helps advance our cause — from education to infrastructure and cultural preservation. Your support shapes a stronger Bowiri for generations to come.</p>
+
+      <h3>Ways to Donate:</h3>
+      <ul>
+        <li><strong>Mobile Money:</strong> 0244-XXX-XXX (Name: Bowiri Dev. Fund)</li>
+        <li><strong>Bank Transfer:</strong> Bowiri Traditional Council Fund — GCB Bank, Jasikan Branch</li>
+        <li><strong>PayPal:</strong> <a href="#" class="link">paypal.me/bowiricouncil</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn">Contact Us for Partnerships</a>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="logo-sm">
+        <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Logo" style="width:42px;height:42px;border-radius:6px;">
+      </div>
+      <div>© 2025 Bowiri Traditional Council — All Rights Reserved</div>
+      <div class="footer-right">
+        <a href="projects.html">Projects</a> |
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // Toggle Nav
+    document.getElementById('nav-toggle').onclick = function() {
+      const nav = document.getElementById('main-nav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    };
+
+    // Reveal Animation
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 100;
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].style.opacity = 1;
+          reveals[i].style.transform = 'translateY(0)';
+        }
+      }
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
