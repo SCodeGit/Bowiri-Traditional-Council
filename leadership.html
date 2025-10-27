@@ -1,403 +1,334 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Leadership — Bowiri Traditional Council</title>
-  <meta name="description" content="Leadership of the Bowiri Traditional Council — Chiefs and Queenmothers upholding our heritage and unity." />
+  <title>Projects & Support — Bowiri Traditional Council</title>
+  <meta name="description" content="Bowiri Traditional Council — heritage, leadership, projects and community support." />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg">
+
   <style>
-    :root{
-      --bg:#fdfcf9;
-      --navy:#071228;
-      --muted:#2b3a4a;
-      --gold:#d4af37;
-      --card:#ffffff;
-      --text:#111827;
-      --soft:#f4f6f8;
-      --frame:#e9d9a6;
-      --shadow: 0 8px 20px rgba(11,28,46,0.12);
-      --radius:12px;
-      --max-width:1100px;
-    }
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.6;
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f8;
+      color: #222;
     }
 
-    /* Header (keeps your site's look) */
-    .site-header{
-      background:linear-gradient(90deg, rgba(7,18,40,0.95), rgba(7,18,40,0.97));
-      color:#fff;
-      position:sticky;
-      top:0;
-      z-index:40;
-      box-shadow: 0 2px 8px rgba(7,18,40,0.15);
+    /* Header */
+    .site-header {
+      background: linear-gradient(90deg, #082567, #001f3f);
+      color: #fff;
+      padding: 0.8rem 0;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
-    .container{max-width:var(--max-width);margin:0 auto;padding:18px;}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;}
-    .brand{display:flex;align-items:center;text-decoration:none;color:inherit;}
-    .logo-btc{font-family:"Playfair Display", serif;font-size:22px;padding:6px 10px;border-radius:6px;background:var(--gold);color:var(--navy);font-weight:700;margin-right:10px}
-    .brand-text{font-weight:600;letter-spacing:0.2px}
-    .nav-toggle{display:none}
-    .main-nav{display:flex;gap:14px}
-    .nav-link{color:rgba(255,255,255,0.9);text-decoration:none;padding:6px 8px;border-radius:6px}
-    .nav-link.active{background:rgba(255,255,255,0.06)}
-
-    /* Page header */
-    .page-main{max-width:var(--max-width);margin:28px auto;padding:0 18px 80px;}
-    .page-header{padding:26px 0 8px}
-    .page-header h1{font-family:"Playfair Display", serif;font-size:34px;color:var(--navy);margin:0 0 6px}
-    .page-header p{color:var(--muted);margin:0 0 12px}
-
-    /* Grid for leaders */
-    .leaders-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-      gap:20px;
-      align-items:start;
-      margin-top:18px;
+    .header-inner {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-
-    /* Card */
-    .leader-card{
-      background:linear-gradient(180deg, var(--card), #fbfaf8 60%);
-      border-radius:var(--radius);
-      padding:18px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(11,28,46,0.04);
-      overflow:visible;
-      position:relative;
+    .brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+    }
+    .logo-btc {
+      background: url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg') no-repeat center/contain;
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+    }
+    .brand-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
     }
 
-    /* Framed portrait */
-    .portrait-frame{
-      width:100%;
-      max-width:220px;
-      height:260px;
-      margin:0 auto 14px;
-      border-radius:8px;
-      padding:10px;
-      background:linear-gradient(180deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));
-      box-shadow: 0 6px 18px rgba(11,28,46,0.08);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border:6px solid var(--frame);
+    /* Navigation */
+    .nav-toggle {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
     }
-    .portrait-frame img{
-      max-width:100%;
-      max-height:100%;
-      object-fit:cover;
-      display:block;
-      border-radius:4px;
+    .main-nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+    .main-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .main-nav a:hover, .main-nav a.active {
+      color: #ffcc33;
     }
 
-    .leader-meta{ text-align:center; margin-bottom:10px;}
-    .leader-meta h3{font-family:"Playfair Display", serif;margin:6px 0 4px;font-size:20px;color:var(--navy)}
-    .leader-meta .title{color:var(--muted);font-size:13px;margin:0}
-
-    /* Bio area */
-    .bio-wrap{font-size:15px;color:var(--muted);background:transparent;}
-    .bio-content{
-      overflow:hidden;
-      transition: max-height 450ms cubic-bezier(.2,.9,.2,1), opacity 300ms;
-      max-height:220px; /* collapsed height */
-      opacity:1;
-      position:relative;
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        background: #001f3f;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 0 0 10px 10px;
+      }
+      .main-nav.active {
+        display: flex;
+      }
     }
-    .bio-content.expanded{max-height:2000px;}
-    .bio-fade{
-      content:'';
-      position:absolute;
-      left:0;right:0;height:48px;bottom:0;
-      background: linear-gradient(0deg, var(--card), rgba(255,255,255,0));
-      pointer-events:none;
-      display:block;
-    }
-    .bio-content.expanded + .bio-fade{ display:none; }
 
-    .read-toggle{
-      display:inline-block;
-      margin-top:10px;
-      padding:8px 12px;
-      border-radius:8px;
-      background:transparent;
-      color:var(--navy);
-      border:1px solid rgba(11,28,46,0.08);
-      cursor:pointer;
-      font-weight:600;
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      background: linear-gradient(135deg, #003399, #082567);
+      color: #fff;
+      padding: 3rem 1rem;
+    }
+    .page-header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+    }
+
+    /* Content */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .page-content {
+      margin: 3rem 0;
+    }
+
+    .content-block h2 {
+      color: #082567;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      color: #fff;
+      min-height: 260px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+    .overlay-card {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(2px);
+      z-index: 1;
+    }
+    .project-card h3, .project-card p {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Welcome Leadership Section */
+    .welcome-leadership {
+      background: url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/durbar-of-chiefs.jpg') center/cover;
+      position: relative;
+      padding: 4rem 1rem;
+      text-align: center;
+      color: #fff;
+    }
+    .welcome-leadership::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(3px);
+    }
+    .welcome-leadership .container {
+      position: relative;
+      z-index: 2;
+    }
+    .welcome-leadership h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+    }
+    .welcome-leadership .btn {
+      display: inline-block;
+      background: #ffcc33;
+      color: #001f3f;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .welcome-leadership .btn:hover {
+      background: #fff;
     }
 
     /* Footer */
-    .site-footer{
-      background:linear-gradient(180deg, rgba(7,18,40,0.9), rgba(7,18,40,0.95));
-      color:#fff;padding:22px 0;margin-top:40px;
+    .site-footer {
+      background: linear-gradient(90deg, #001f3f, #082567);
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+      position: relative;
     }
-    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .logo-sm{font-family:"Playfair Display";background:var(--gold);padding:6px 8px;border-radius:6px;color:var(--navy)}
+    .footer-inner {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .footer-logo {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      filter: brightness(0.95);
+    }
+    .footer-right a {
+      color: #ffcc33;
+      text-decoration: none;
+    }
 
-    /* Animations: random subtle variants */
-    .animate{opacity:0;transform:translateY(18px) scale(0.995);transition:opacity 700ms ease, transform 700ms cubic-bezier(.2,.9,.2,1);}
-    .animate.in{opacity:1;transform:none;}
-    .anim-zoom{transform:scale(.98);transition:transform 650ms ease, opacity 650ms;}
-    .anim-zoom.in{transform:none;opacity:1;}
-    .anim-slide-left{transform:translateX(-12px);opacity:0;transition:transform 680ms cubic-bezier(.2,.9,.2,1),opacity 680ms;}
-    .anim-slide-left.in{transform:none;opacity:1;}
-    .anim-slide-right{transform:translateX(12px);opacity:0;transition:transform 680ms cubic-bezier(.2,.9,.2,1),opacity 680ms;}
-    .anim-slide-right.in{transform:none;opacity:1;}
-
-    /* Responsive */
-    @media (max-width:700px){
-      .portrait-frame{max-width:180px;height:220px}
-      .bio-content{max-height:200px}
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
+
 <body>
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="brand">
-      <div class="logo-btc">Bowiri</div>
+      <div class="logo-btc"></div>
       <span class="brand-text">Bowiri Traditional Council</span>
     </a>
-
     <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">☰</button>
-    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="projects.html" class="nav-link">Projects & Support</a>
-      <a href="leadership.html" class="nav-link active">Leadership</a>
-      <a href="contact.html" class="nav-link">Contact</a>
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects & Support</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
 <main class="page-main container">
-  <section class="page-header">
-    <h1>Leadership</h1>
-    <p>Traditional leaders and queenmothers of Bowiri Traditional Area. Click “Read more” to expand the full biography inline.</p>
+  <section class="page-header reveal">
+    <h1>Projects & Support</h1>
   </section>
 
   <section class="page-content">
-    <div class="leaders-grid">
+    <div class="content-block reveal">
+      <h2>Community Projects & Initiatives</h2>
+      <p>The Bowiri Traditional Council continues to promote development across education, health, and culture. Below are key projects currently ongoing, with opportunities for public support.</p>
 
-      <!-- 1 -->
-      <article class="leader-card animate" data-anim>
-        <div class="portrait-frame">
-          <img src="images/nana-osiadieyor-kwabena-salo-v.jpg" alt="Nana Osiadieyor Kwabena Salo V">
-        </div>
-        <div class="leader-meta">
-          <h3>Nana Osiadieyor Kwabena Salo V</h3>
-          <div class="title">Paramount Chief (Bowirimanhene)</div>
-        </div>
-        <div class="bio-wrap">
-          <div class="bio-content" aria-expanded="false">
-            <p>Nana Osiadieyor Kwabena Salo V was born on 5th October, 1999 at Bowiri Anyinase  in the Bayida Clan in the Biakoye District of the Oti Region.  His parent are Mr. Eric Kwabena and Mrs. Bertha Akosua Nyame, all from Bowiri Anyinase.</p>
-            <p>He start his primary  education at Worawora Anglican Primary school and the JHS and completed in 2017. He was a student at Bishop Herman College at Kpando from 2017 to 2020.</p>
-            <p>He taught as a pupil-Teacher in the Stars On Earth Academy in Accra Madina for 4 years from 2020 to 2024. He is now a student of Peki College of Education offering the Bachelor's Degree in Education.</p>
-            <p>He was enstooled on Friday 13th October, 2023 at Bowiri Anyinase  as the Paramount Chief of Bowiri Traditional Area(Bowirimanhene). He is an organist and enjoys soft music.</p>
-          </div>
-          <div class="bio-fade" aria-hidden="true"></div>
-          <button class="read-toggle" aria-controls="">Read more</button>
-        </div>
-      </article>
+      <div class="project-list">
+        <article class="project-card reveal" style="background-image:url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/b440f76a804220755581f42fa8cf169b.jpg');">
+          <div class="overlay-card"></div>
+          <h3>School Renovation — Bowiri Primary</h3>
+          <p>Upgrading classrooms and learning materials for over 450 pupils to ensure a brighter future for Bowiri’s children.</p>
+        </article>
 
-      <!-- 2 -->
-      <article class="leader-card animate" data-anim>
-        <div class="portrait-frame">
-          <img src="images/nana-kwasi-asiedu-ii.jpg" alt="Nana Kwasi Asiedu II">
-        </div>
-        <div class="leader-meta">
-          <h3>Nana Kwasi Asiedu II</h3>
-          <div class="title">Sub-Divisional Chief (Ankobehene)</div>
-        </div>
-        <div class="bio-wrap">
-          <div class="bio-content" aria-expanded="false">
-            <p>Nana Kwasi Asiedu II was born on Sunday 2nd December 1973 to Inspector John Kofi Anso Bandua of blessed memory and Madam Gertrude Theodora Abena Asiedu-Bandua, both from Bowiri Anyinase. Nana started his Basic School at Kumasi Presby/Methodist primary one to six (1-6) from 1979-1985. He continued to Kumasi Methodist Day JHS 1-3 in 1986 - 1988.</p>
-            <p>He worked at KBL as a driver for three years from 1989-1991. He joined the Ministry of Defence as a Civilian driver from 1997 to date. Nana was enstooled as Chief with his stool name as Nana Kwasi Asiedu II on 19th November, 2021 as Sub-Divisinal Chief.</p>
-            <p>Private name of chief is Jacob Kwasi Anso Bandaua as ANKOBEAHENE OF BOWIRI TRADITIONAL AREA. from BAWUNYA CLAN of Bowiri Anyinase.</p>
-          </div>
-          <div class="bio-fade" aria-hidden="true"></div>
-          <button class="read-toggle">Read more</button>
-        </div>
-      </article>
+        <article class="project-card reveal" style="background-image:url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/image-82-1024x683.png');">
+          <div class="overlay-card"></div>
+          <h3>Clean Water Initiative</h3>
+          <p>Drilling boreholes and maintaining safe drinking water systems in remote communities.</p>
+        </article>
 
-      <!-- 3 -->
-      <article class="leader-card animate" data-anim>
-        <div class="portrait-frame">
-          <img src="images/nana-yaa-sikebea-ii.jpg" alt="Nana Yaa Sikebea II">
-        </div>
-        <div class="leader-meta">
-          <h3>Nana Yaa Sikebea II</h3>
-          <div class="title">Kyidomhemaa (Divisional Queenmother)</div>
-        </div>
-        <div class="bio-wrap">
-          <div class="bio-content" aria-expanded="false">
-            <p>Nana Yaa Sikebea II was born on 9th April, 1964 at Bowiri Kwamekrom to Mr. Kofi Kumah Bediako and Madam Afua Atukpawu all of blessed memory.</p>
-            <p>She started her Primary School Education at Bowiri Kwamekrom E.P Primary in 1970.</p>
-            <p>She was taken to Bowiri Amanfrom to continue Primary five in 1974. At Primary six in 1975 she lost her father. Being left with nobody to care for school education, she returned to Bowiri Kwamekrom and started learning to trade and farm.</p>
-            <p>She was enstooled on 5th August, 2022 on the title of Kyidomhemaa at Bowiri Kwamekrom with the status of a Divisional Queenmother</p>
-          </div>
-          <div class="bio-fade" aria-hidden="true"></div>
-          <button class="read-toggle">Read more</button>
-        </div>
-      </article>
-
-      <!-- 4 -->
-      <article class="leader-card animate" data-anim>
-        <div class="portrait-frame">
-          <img src="images/nana-kwasi-okyerefor-iii.jpg" alt="Nana Kwasi Okyerefor III">
-        </div>
-        <div class="leader-meta">
-          <h3>Nana Kwasi Okyerefor III</h3>
-          <div class="title">Tufuhene</div>
-        </div>
-        <div class="bio-wrap">
-          <div class="bio-content" aria-expanded="false">
-            <p>Nana Kwasi Okyerefor III was born on 11th March, 1969 at Bowiri Aboabo. He started Basic School in 1976, continued at Bowiri Takrabe L/A Middle School. Obtained Middle School Leaving Certificate in 1986. Gained employment with Abibigroma Theater Company, School of Performing Arts, Legon. In 1993 worked with National Theater, Accra for four(4) additional years a total of eleven(11) years working experience with Abibigroma Theater Company.</p>
-            <p>He travelled to USA for greener pastures in 1997. In USA, worked with Gate Gourmet between 1998 and 2001. He also worked as a shuttle bus driver for preflight packing company in USA from 2001-2003. I persuade a diploma certificate in Transport Management. After acquisition of the diploma Certificate, I worked with American Transportation USA 2003- 2005, JB. Hunt Transportation USA 2005-2008, Knight Transportation USA 2008-2016.</p>
-            <p>In 2016, I registered my own company as Efo Ike Logistics Inc USA as C.E.O till date. I was enstooled at home on the 13th August,2021 as Nana Kwasi Okyerefor III the Tufuhene of Bowiri Traditional Area at Bowiri Aboabo.</p>
-          </div>
-          <div class="bio-fade" aria-hidden="true"></div>
-          <button class="read-toggle">Read more</button>
-        </div>
-      </article>
-
-      <!-- 5 -->
-      <article class="leader-card animate" data-anim>
-        <div class="portrait-frame">
-          <img src="images/nana-yaa-asiedua-i.jpg" alt="Nana Yaa Asiedua I">
-        </div>
-        <div class="leader-meta">
-          <h3>Nana Yaa Asiedua I</h3>
-          <div class="title">Queenmother</div>
-        </div>
-        <div class="bio-wrap">
-          <div class="bio-content" aria-expanded="false">
-            <p>Nana Yaa  Asiedua I was born on Thursday 3rd September, 1981 at Bowiri Anyinase to Mr. Solomon G.Y. Asiedu of Bowiri Anyinase and Mrs. Mary Abena Asiedu of Bodada-Buem.</p>
-            <p>She started her Basic Education at Sogakofe L/A primary school from 1985 to 1991and 2 years at Sogakofe L/A JHS from 1991 to 1994. She did one year at Jasikan College of Education Demonstration JHS in 1995/1996 and entered Ho Mawuli Senior High School in 1996/1997 and completed in 1999 with school Cert: O" Level. She was a celebrated Athlete in both Track and Field events which earned her great Laurels. She entered Tamale Sawaba Secretariate school in order to update herself in Computer Literacy and completed in 2003.</p>
-            <p>She is married and has four children, two boys and two girls. She is Self- employed. Her hobbies are: Listening to soft music and Films.</p>
-          </div>
-          <div class="bio-fade" aria-hidden="true"></div>
-          <button class="read-toggle">Read more</button>
-        </div>
-      </article>
-
-      <!-- 6 -->
-      <article class="leader-card animate" data-anim>
-        <div class="portrait-frame">
-          <img src="images/nana-kwasi-sike-ii.jpg" alt="Nana Kwasi Sike II">
-        </div>
-        <div class="leader-meta">
-          <h3>Nana Kwasi Sike II</h3>
-          <div class="title">Kyidomhene</div>
-        </div>
-        <div class="bio-wrap">
-          <div class="bio-content" aria-expanded="false">
-            <p>Nana Kwasi Sike II was born on 25th December 1984 at Bowiri Kwamekrom to Cephas Kudzo Yerenkyi-Bekoe and Mawuse Semanhia both from Bowiri Kwamekrom.He started E.P. Basic Education in 1986 and 1990 -1992 at Akpafu Odomi continued at Hohoe E.P. primary 4 and completed Hohoe JHS in 1998. He attended Alavanyo E.P. Trade Training Center learnt Block laying, 2000 to 2002 studied at Purity Technology Institute Ho -2005 for HND , studied Building Technology at HO Technical University and completed in 2009.</p>
-            <p>At KNUST Obtained BSC in Quantity Surveying and Construction Economics completed in June 2015 . 2024 once again offered admission into KNUST to Peruse MSC in construction Management. In 2011 offered a job at Fathers Dogli Memorial Institute at New Ayoma 2011 - 2013 , posted to Akatsi South Municipal Assembly as Technical Engineer in Works Dept. 2018-2020. Ga East Municipal Assembly as Senior Technical Engineer in Works Dept  then Ledzokuku Municipal Assembly at Assist Quantity Surveyor, August 2020 till date.</p>
-            <p>He was enstooled on Friday 5th August,2022 as the chief of Bowiri Kwamekrom, Title of office as Kyidomhene of Bowiri Traditional Area Married and has 3 children. He loves singing and makes friends that impact life positively.</p>
-          </div>
-          <div class="bio-fade" aria-hidden="true"></div>
-          <button class="read-toggle">Read more</button>
-        </div>
-      </article>
-
-      <!-- 7 -->
-      <article class="leader-card animate" data-anim>
-        <div class="portrait-frame">
-          <img src="images/nana-kwasi-asantey-ii.jpg" alt="Nana Kwasi Asantey II">
-        </div>
-        <div class="leader-meta">
-          <h3>Nana Kwasi Asantey II</h3>
-          <div class="title">Gyasehene</div>
-        </div>
-        <div class="bio-wrap">
-          <div class="bio-content" aria-expanded="false">
-            <p>Nana Kwasi Asantey II with my private name as Obiadie Kwasi Foster was born in the year 1976 to Mr. Odeifor Kwasi John and Madam Afua Victoria Oheneasah all from Bowiri Amanfrom.</p>
-            <p>I started my primary school education at Bowiri Kwamekrom in the year 1983 and continued at Bowiri Amanfrom E.P Junior High School and completed in the year 1992.</p>
-            <p>I went through the carpentry course for three years and now a full time carpenter and at the same time a businessman.</p>
-            <p>I am with a wife and seven(7) children. I was enstooled a chief on the 18th November, 2022 the Gyasehene for Bowiri Kwamekrom with the stool name as Nana Kwasi Asantey II.</p>
-          </div>
-          <div class="bio-fade" aria-hidden="true"></div>
-          <button class="read-toggle">Read more</button>
-        </div>
-      </article>
-
-    </div><!-- /.leaders-grid -->
+        <article class="project-card reveal" style="background-image:url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/durbar-of-chiefs.jpg');">
+          <div class="overlay-card"></div>
+          <h3>Health Outreach Programme</h3>
+          <p>Organizing mobile clinics and vaccination campaigns in partnership with district health services.</p>
+        </article>
+      </div>
+    </div>
   </section>
 </main>
 
+<section class="welcome-leadership">
+  <div class="container reveal">
+    <h3>Welcome to the Bowiri Traditional Area</h3>
+    <p>Discover the esteemed leadership guiding our vision, promoting peace and development across the Bowiri communities.</p>
+    <a href="leadership.html" class="btn">Meet the Leadership</a>
+  </div>
+</section>
+
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-left">
-      <div class="logo-sm">BTC</div>
-      <p>© <span id="year"></span> Bowiri Traditional Council — All rights reserved.</p>
-    </div>
+  <div class="footer-inner">
+    <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri logo" class="footer-logo">
+    <p>© <span id="year"></span> Bowiri Traditional Council — All rights reserved.</p>
     <div class="footer-right">
-      <p> Crafted by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.9)">SCode Studio</a></p>
+      <p>Crafted by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
     </div>
   </div>
 </footer>
 
 <script>
-  // set year
-  (function(){ const y = new Date().getFullYear(); document.getElementById('year').textContent = y; })();
+  // Year auto update
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Read More toggles (one-per-card)
-  document.addEventListener('click', function(e){
-    if(e.target && e.target.classList.contains('read-toggle')){
-      const btn = e.target;
-      const wrap = btn.closest('.bio-wrap');
-      const content = wrap.querySelector('.bio-content');
-      const isExpanded = content.classList.toggle('expanded');
-      content.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-      btn.textContent = isExpanded ? 'Read less' : 'Read more';
-      // smooth scroll to the top of this card when expanding on small screens
-      if(isExpanded && window.innerWidth < 700){
-        const top = btn.closest('.leader-card').getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({top, behavior:'smooth'});
+  // Navigation toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const mainNav = document.getElementById('main-nav');
+  navToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
+
+  // Reveal animation
+  const reveals = document.querySelectorAll('.reveal');
+  window.addEventListener('scroll', () => {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 100;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
       }
     }
   });
-
-  // IntersectionObserver to add random animation classes
-  (function(){
-    const variants = ['anim-zoom','anim-slide-left','anim-slide-right','animate'];
-    const nodes = Array.from(document.querySelectorAll('[data-anim]'));
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          const el = entry.target;
-          // pick a pseudo-random variant based on index
-          const idx = nodes.indexOf(el);
-          const variant = variants[idx % variants.length];
-          el.classList.add(variant);
-          // trigger in state slightly after
-          requestAnimationFrame(()=> setTimeout(()=> el.classList.add('in'), 40));
-          io.unobserve(el);
-        }
-      });
-    }, {threshold:0.18});
-    nodes.forEach(n => io.observe(n));
-  })();
-
-  // Simple nav toggle for very small screens (if needed)
-  (function(){
-    const toggle = document.getElementById('nav-toggle');
-    const nav = document.getElementById('main-nav');
-    if(toggle){
-      toggle.style.display='none'; // keep hidden if you don't use mobile menu code
-      toggle.addEventListener('click', ()=>{ nav.classList.toggle('open'); });
-    }
-  })();
 </script>
 </body>
 </html>
