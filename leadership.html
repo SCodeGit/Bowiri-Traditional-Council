@@ -1285,6 +1285,42 @@ backBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
+<!-- Hamburger Menu HTML (place in your header/nav on Leadership page) -->
+<button class="hamburger" aria-label="Open menu">
+  &#9776; <!-- this is the 3 stripes icon -->
+</button>
+<nav class="nav-links">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Optional CSS (for visibility and responsive behavior) -->
+<style>
+  .nav-links { display: none; }
+  .hamburger { font-size: 28px; cursor: pointer; z-index: 1000; }
+  .nav-links.active { display: block; }
+  @media(min-width: 769px){
+      .hamburger { display: none; }
+      .nav-links { display: block !important; }
+  }
+</style>
+
+<!-- JS: Place at the bottom of Leadership page -->
+<script>
+  (function() {
+      const menuBtn = document.querySelector('.hamburger');
+      const nav = document.querySelector('.nav-links');
+      if(menuBtn && nav){
+          menuBtn.addEventListener('click', () => {
+              nav.classList.toggle('active');
+          });
+      }
+  })();
+</script>
 
 </body>
 </html>
