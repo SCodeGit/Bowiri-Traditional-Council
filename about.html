@@ -22,7 +22,7 @@
       <span class="brand-text">Bowiri Traditional Council</span>
     </a>
 
-    <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">☰</button>
+    <!-- Removed 3-stripes button -->
     <nav id="main-nav" class="main-nav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="about.html" class="nav-link active">About</a>
@@ -63,14 +63,47 @@
   </div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="back-to-top" title="Back to Top">↑</button>
+
+<style>
+  #back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    background-color: #4B0082;
+    color: #FFD700;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: background-color 0.3s;
+  }
+  #back-to-top:hover {
+    background-color: #800000;
+  }
+</style>
+
 <script>
   // Auto year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Mobile nav toggle
-  const toggle = document.getElementById('nav-toggle');
-  const nav = document.getElementById('main-nav');
-  toggle.addEventListener('click', () => nav.classList.toggle('active'));
+  // Back to Top functionality
+  const backToTop = document.getElementById("back-to-top");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 </script>
 
 <script src="js/main.js"></script>
