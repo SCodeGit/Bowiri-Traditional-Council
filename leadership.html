@@ -183,10 +183,30 @@
   <section class="page-header">
     <h1>Leadership</h1>
     <p>Traditional leaders and queenmothers of Bowiri Traditional Area. Click “Read more” to expand the full biography inline.</p>
-  </section>
+<section class="page-content">
+  <div class="leadership-gallery">
+    <div class="portrait-frame">
+      <img src="https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/58918c476245ef4de632bcabdd286896e14f8b7b/images/paramount%20chief.jpg?raw=true" alt="Nana Osiadieyor Kwabena Salo V" onclick="openModal(this)">
+    </div>
+    <div class="portrait-frame">
+      <img src="https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/58918c476245ef4de632bcabdd286896e14f8b7b/images/Asie.jpg?raw=true" alt="Nana Yaa Asiedu" onclick="openModal(this)">
+    </div>
+    <div class="portrait-frame">
+      <img src="https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/58918c476245ef4de632bcabdd286896e14f8b7b/images/bea.jpg?raw=true" alt="Sikabea" onclick="openModal(this)">
+    </div>
+    <div class="portrait-frame">
+      <img src="https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/58918c476245ef4de632bcabdd286896e14f8b7b/images/sike.jpg?raw=true" alt="Sike Nana Kwasi" onclick="openModal(this)">
+    </div>
+  </div>
+</section>
 
-  <section class="page-content">
-    <div class="leaders-grid">
+<!-- Modal -->
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+  <div id="caption"></div>
+</div>
+
 
       <!-- 1 -->
       <article class="leader-card animate" data-anim>
