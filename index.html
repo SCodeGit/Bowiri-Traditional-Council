@@ -248,25 +248,57 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo">
-        <span class="brand-text">Bowiri Traditional Council</span>
-      </a>
+ <!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner" style="text-align:center; margin-top:10px;">
+    <a href="index.html" class="brand">
+      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" 
+           alt="Bowiri Logo" 
+           style="width:56px; height:56px; border-radius:8px; object-fit:cover;">
+      <span class="brand-text" style="display:block; font-weight:bold; font-size:1.3em; margin-top:5px;">Bowiri Traditional Council</span>
+    </a>
+  </div>
+</header>
 
-      <button id="nav-toggle">☰</button>
-      <nav id="main-nav" class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<!-- Horizontal Navigation Bar under Logo -->
+<nav id="page-nav" style="text-align:center; margin-top:10px;">
+  <ul style="list-style:none; padding:0; margin:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px;">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+    <li><a href="projects.html" class="nav-link">Projects</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+</nav>
 
+<!-- Styles for navigation links -->
+<style>
+  #page-nav .nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    background: linear-gradient(to right, #FFD700, #FF4500); /* Royal gold to red */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  #page-nav .nav-link:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    #page-nav ul {
+      gap: 10px;
+    }
+    #page-nav .nav-link {
+      font-size: 0.9em;
+    }
+  }
+</style>
+  
   <!-- HERO -->
   <section class="hero">
     <h2>Welcome to the Bowiri Traditional Council</h2>
