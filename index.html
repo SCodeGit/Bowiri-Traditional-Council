@@ -114,15 +114,19 @@
       }
     }
 
-    /* ===== HERO SECTION ===== */
-    .hero {
-      background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
-      url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/35640ee45f84a217bdedf3ca4d4b45de0cab3731/images/maxresdefault.jpg') center/cover no-repeat;
-      text-align: center;
-      padding: 120px 20px;
-      color: var(--white);
-      position: relative;
-    }
+/* ===== HERO SECTION ===== */
+.hero {
+  --overlay-dark: rgba(10, 15, 15, 0.7); /* dark overlay */
+  background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
+              url('https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/78285f873566215cc6be9f0430e415e4dfa7d8b5/hero22.jpg?raw=true') 
+              center/cover no-repeat;
+  text-align: center;
+  padding: 120px 20px;
+  color: var(--ivory);
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
     .hero h2 {
       font-family: 'Playfair Display', serif;
@@ -190,16 +194,16 @@
       text-decoration: none;
     }
 
-    /* ===== FOOTER ===== */
-    .site-footer {
-      background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
-      url('https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/35640ee45f84a217bdedf3ca4d4b45de0cab3731/images/durbar-of-chiefs.jpg') center/cover no-repeat;
-      color: var(--white);
-      padding: 40px 0;
-      text-align: center;
-      backdrop-filter: blur(4px);
-    }
-
+  /* ===== FOOTER ===== */
+.site-footer {
+  background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
+              url('https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/78285f873566215cc6be9f0430e415e4dfa7d8b5/hero22.jpg?raw=true') 
+              center/cover no-repeat;
+  color: var(--white);
+  padding: 40px 0;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
     .footer-inner {
       display: flex;
       flex-direction: column;
