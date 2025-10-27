@@ -5,53 +5,143 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Bowiri Traditional Council</title>
   <meta name="description" content="Bowiri Traditional Council — heritage, leadership, projects and community support." />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
-<!-- Favicon for desktop and mobile -->
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" sizes="32x32">
-<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 
-<!-- Optional: make it circular with royal gold/red border for modern browsers -->
-<style>
-  /* Applies only for browsers that respect mask-image / clip-path in favicons (mostly desktop) */
-  link[rel="icon"]::before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 2px solid #FFD700; /* gold */
-    box-shadow: 0 0 0 2px #8B0000; /* deep red outer ring */
-  }
-</style>
-
+  <!-- Favicon for desktop and mobile -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Dark background for entire page */
+    body {
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    .site-header {
+      text-align: center;
+      padding: 15px 0;
+    }
+    .site-header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      vertical-align: middle;
+    }
+    .brand-text {
+      display: inline-block;
+      font-size: 1.5em;
+      font-weight: bold;
+      vertical-align: middle;
+      margin-left: 10px;
+      color: #FFD700; /* default text, gradient will override */
+    }
+
+    /* Page links: royal gold → red gradient */
+    #page-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    #page-nav ul li a {
+      font-weight: bold;
+      font-size: 1em;
+      text-decoration: none;
+      background: linear-gradient(90deg, #FFD700, #B22222);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: transform 0.2s;
+    }
+    #page-nav ul li a:hover {
+      transform: scale(1.05);
+    }
+
+    /* Main content */
+    .page-main {
+      padding: 20px;
+    }
+    .content-block h2, .content-block h3 {
+      color: #f5f5dc; /* cream text for dark background */
+    }
+    .content-block p {
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 15px 0;
+      text-align: center;
+      background: #0a0a0a;
+      color: #f5f5f5;
+      border-top: 1px solid #333;
+    }
+    .site-footer img {
+      vertical-align: middle;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .site-footer a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+
+    /* Back to Top */
+    #back-to-top {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      display: none;
+      background-color: #4B0082;
+      color: #FFD700;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      z-index: 999;
+      transition: background-color 0.3s;
+    }
+    #back-to-top:hover {
+      background-color: #800000;
+    }
+  </style>
 </head>
 <body>
 
 <header class="site-header">
-  <div class="container header-inner" style="text-align:center;">
-    <a href="index.html" class="brand" style="display:inline-block; text-align:center;">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
       <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" 
-           alt="Bowiri Traditional Council Logo" 
-           style="width:50px; height:50px; vertical-align:middle; border-radius:8px; object-fit:cover;">
-      <span class="brand-text" style="display:inline-block; font-size:1.5em; font-weight:bold; color:#4B0082; vertical-align:middle; margin-left:10px;">Bowiri Traditional Council</span>
+           alt="Bowiri Traditional Council Logo">
+      <span class="brand-text">Bowiri Traditional Council</span>
     </a>
 
-    <!-- Horizontal page navigation below the logo -->
-    <nav id="page-nav" style="text-align:center; margin-top:10px;">
-      <ul style="list-style:none; padding:0; margin:0; display:flex; justify-content:center; flex-wrap:wrap; gap:15px;">
-        <li><a href="index.html" style="text-decoration:none; color:#FFD700; font-weight:bold; font-size:1em;">Home</a></li>
-        <li><a href="about.html" style="text-decoration:none; color:#FFD700; font-weight:bold; font-size:1em;">About</a></li>
-        <li><a href="leadership.html" style="text-decoration:none; color:#FFD700; font-weight:bold; font-size:1em;">Leadership</a></li>
-        <li><a href="projects.html" style="text-decoration:none; color:#FFD700; font-weight:bold; font-size:1em;">Projects</a></li>
-        <li><a href="contact.html" style="text-decoration:none; color:#FFD700; font-weight:bold; font-size:1em;">Contact</a></li>
+    <!-- Horizontal page navigation -->
+    <nav id="page-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
 
 <main class="page-main container">
   <section class="page-header reveal framed">
@@ -83,30 +173,8 @@
   </div>
 </footer>
 
-<!-- Back to Top Button -->
+<!-- Back to Top -->
 <button id="back-to-top" title="Back to Top">↑</button>
-
-<style>
-  #back-to-top {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    display: none;
-    background-color: #4B0082;
-    color: #FFD700;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    z-index: 999;
-    transition: background-color 0.3s;
-  }
-  #back-to-top:hover {
-    background-color: #800000;
-  }
-</style>
 
 <script>
   // Auto year
