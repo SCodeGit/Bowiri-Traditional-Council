@@ -6,6 +6,9 @@
   <title>Leadership — Bowiri Traditional Council</title>
   <meta name="description" content="Leadership of the Bowiri Traditional Council — Chiefs and Queenmothers upholding our heritage and unity." />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg">
+
   <style>
     :root{
       --bg:#fdfcf9;
@@ -20,10 +23,11 @@
       --radius:12px;
       --max-width:1100px;
     }
+
     html,body{height:100%;}
     body{
       margin:0;
-      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-family:"Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       background:var(--bg);
       color:var(--text);
       -webkit-font-smoothing:antialiased;
@@ -31,30 +35,101 @@
       line-height:1.6;
     }
 
-    /* Header (keeps your site's look) */
+    /* Header */
     .site-header{
       background:linear-gradient(90deg, rgba(7,18,40,0.95), rgba(7,18,40,0.97));
       color:#fff;
       position:sticky;
       top:0;
       z-index:40;
-      box-shadow: 0 2px 8px rgba(7,18,40,0.15);
+      box-shadow:0 2px 8px rgba(7,18,40,0.15);
     }
     .container{max-width:var(--max-width);margin:0 auto;padding:18px;}
     .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;}
     .brand{display:flex;align-items:center;text-decoration:none;color:inherit;}
-    .logo-btc{font-family:"Playfair Display", serif;font-size:22px;padding:6px 10px;border-radius:6px;background:var(--gold);color:var(--navy);font-weight:700;margin-right:10px}
-    .brand-text{font-weight:600;letter-spacing:0.2px}
-    .nav-toggle{display:none}
-    .main-nav{display:flex;gap:14px}
-    .nav-link{color:rgba(255,255,255,0.9);text-decoration:none;padding:6px 8px;border-radius:6px}
-    .nav-link.active{background:rgba(255,255,255,0.06)}
+    .brand img{height:48px;width:auto;border-radius:6px;margin-right:10px;}
+    .brand-text{font-weight:600;letter-spacing:0.2px;font-size:18px;}
+    .main-nav{display:flex;gap:14px;}
+    .nav-link{color:rgba(255,255,255,0.9);text-decoration:none;padding:6px 8px;border-radius:6px;}
+    .nav-link.active{background:rgba(255,255,255,0.06);}
 
-    /* Page header */
+    /* Page content */
     .page-main{max-width:var(--max-width);margin:28px auto;padding:0 18px 80px;}
-    .page-header{padding:26px 0 8px}
-    .page-header h1{font-family:"Playfair Display", serif;font-size:34px;color:var(--navy);margin:0 0 6px}
-    .page-header p{color:var(--muted);margin:0 0 12px}
+    .page-header{padding:26px 0 8px;}
+    .page-header h1{font-family:"Playfair Display",serif;font-size:34px;color:var(--navy);margin:0 0 6px;}
+    .page-header p{color:var(--muted);margin:0 0 12px;}
+    .leader-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;}
+    .leader-card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      transition:transform 0.3s ease;
+    }
+    .leader-card:hover{transform:translateY(-4px);}
+    .leader-card img{width:100%;height:260px;object-fit:cover;}
+    .leader-info{padding:18px;}
+    .leader-info h3{margin:0 0 6px;font-family:"Playfair Display",serif;font-size:20px;color:var(--navy);}
+    .leader-info p{margin:0;color:var(--muted);}
+    footer{
+      background:linear-gradient(180deg, rgba(7,18,40,0.95), rgba(7,18,40,1));
+      color:white;
+      padding:40px 18px;
+      text-align:center;
+    }
+    footer img{height:60px;width:auto;margin-bottom:10px;border-radius:8px;}
+    footer p{margin:4px 0;color:rgba(255,255,255,0.8);}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo">
+        <span class="brand-text">Bowiri Traditional Council</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="leadership.html" class="nav-link active">Leadership</a>
+        <a href="heritage.html" class="nav-link">Heritage</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="page-header">
+      <h1>Leadership of the Bowiri Traditional Council</h1>
+      <p>Meet the Chiefs and Queenmothers who uphold the traditions, unity, and cultural integrity of the Bowiri Traditional Area.</p>
+    </div>
+
+    <section class="leader-grid">
+      <div class="leader-card">
+        <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/chief1.jpg" alt="Paramount Chief">
+        <div class="leader-info">
+          <h3>Paramount Chief</h3>
+          <p>Custodian of the Bowiri lands, tradition, and unity.</p>
+        </div>
+      </div>
+
+      <div class="leader-card">
+        <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/main/images/queen1.jpg" alt="Queenmother">
+        <div class="leader-info">
+          <h3>Queenmother</h3>
+          <p>Guardian of the people’s welfare and women’s empowerment.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo">
+    <p>&copy; 2025 Bowiri Traditional Council. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
 
     /* Grid for leaders */
     .leaders-grid{
