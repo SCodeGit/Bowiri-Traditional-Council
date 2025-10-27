@@ -236,27 +236,37 @@
 <section class="page-content">
   <div class="leaders-grid">
 
-<!-- Modal -->
-<div id="myModal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modal-img">
-  <div id="caption"></div>
-</div>
-
-
-    <!-- 1 -->
+<!-- Leader Card -->
 <article class="leader-card animate" data-anim>
   <!-- Portrait Frame with Clickable Modal -->
-  <div class="portrait-frame">
+  <div class="portrait-frame" style="position: relative;">
     <img 
       src="https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/800e09d4ad8f8e212603b8a272537579d523f389/king%20new.png?raw=true" 
       alt="Nana Osiadieyor Kwabena Salo V" 
       onclick="openModal(this)" 
     />
   </div>
+
+  <!-- Leader Info -->
+  <div class="leader-meta">
+    <h3>Nana Osiadieyor Kwabena Salo V</h3>
+    <div class="title">Paramount Chief (Bowirimanhene)</div>
+  </div>
+
+  <!-- Bio Section -->
+  <div class="bio-wrap">
+    <div class="bio-content" id="bio1" aria-expanded="false" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+      <p>Nana Osiadieyor Kwabena Salo V was born on 5th October, 1999 at Bowiri Anyinase in the Bayida Clan in the Biakoye District of the Oti Region. His parents are Mr. Eric Kwabena and Mrs. Bertha Akosua Nyame, all from Bowiri Anyinase.</p>
+      <p>He started his primary education at Worawora Anglican Primary School and JHS and completed in 2017. He was a student at Bishop Herman College at Kpando from 2017 to 2020.</p>
+      <p>He taught as a pupil-Teacher in the Stars On Earth Academy in Accra Madina for 4 years from 2020 to 2024. He is now a student of Peki College of Education offering the Bachelor's Degree in Education.</p>
+      <p>He was enstooled on Friday 13th October, 2023 at Bowiri Anyinase as the Paramount Chief of Bowiri Traditional Area (Bowirimanhene). He is an organist and enjoys soft music.</p>
+    </div>
+    <div class="bio-fade" aria-hidden="true"></div>
+    <button class="read-toggle" aria-controls="bio1" onclick="toggleBio('bio1')">Read more</button>
+  </div>
 </article>
 
-<!-- Modal Structure -->
+<!-- Modal -->
 <div id="myModal" class="modal">
   <span class="close" onclick="closeModal()">&times;</span>
   <img class="modal-content" id="modal-img">
@@ -310,15 +320,23 @@
     font-weight: bold;
     cursor: pointer;
   }
+
+  /* Optional bio fade effect */
+  .bio-fade {
+    height: 50px;
+    background: linear-gradient(rgba(255,255,255,0), #fff);
+    margin-top: -50px;
+    display: block;
+  }
 </style>
 
 <!-- JavaScript -->
 <script>
+  // Modal
   function openModal(img) {
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("modal-img");
-    var caption = document.getElementById("caption");
-
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("modal-img");
+    const caption = document.getElementById("caption");
     modal.style.display = "block";
     modalImg.src = img.src;
     caption.innerHTML = img.alt;
@@ -327,22 +345,16 @@
   function closeModal() {
     document.getElementById("myModal").style.display = "none";
   }
+
+  // Read More toggle
+  function toggleBio(bioId) {
+    const bio = document.getElementById(bioId);
+    const expanded = bio.getAttribute('aria-expanded') === 'true';
+    bio.setAttribute('aria-expanded', !expanded);
+    bio.style.maxHeight = expanded ? '0' : bio.scrollHeight + 'px';
+  }
 </script>
-        <div class="leader-meta">
-          <h3>Nana Osiadieyor Kwabena Salo V</h3>
-          <div class="title">Paramount Chief (Bowirimanhene)</div>
-        </div>
-        <div class="bio-wrap">
-          <div class="bio-content" aria-expanded="false">
-            <p>Nana Osiadieyor Kwabena Salo V was born on 5th October, 1999 at Bowiri Anyinase  in the Bayida Clan in the Biakoye District of the Oti Region.  His parent are Mr. Eric Kwabena and Mrs. Bertha Akosua Nyame, all from Bowiri Anyinase.</p>
-            <p>He start his primary  education at Worawora Anglican Primary school and the JHS and completed in 2017. He was a student at Bishop Herman College at Kpando from 2017 to 2020.</p>
-            <p>He taught as a pupil-Teacher in the Stars On Earth Academy in Accra Madina for 4 years from 2020 to 2024. He is now a student of Peki College of Education offering the Bachelor's Degree in Education.</p>
-            <p>He was enstooled on Friday 13th October, 2023 at Bowiri Anyinase  as the Paramount Chief of Bowiri Traditional Area(Bowirimanhene). He is an organist and enjoys soft music.</p>
-          </div>
-          <div class="bio-fade" aria-hidden="true"></div>
-          <button class="read-toggle" aria-controls="">Read more</button>
-        </div>
-      </article>
+
 
       <!-- 2 -->
       <article class="leader-card animate" data-anim>
