@@ -458,6 +458,106 @@
   }
 </script>
 
+        <article class="leader-card animate" data-anim>
+  <!-- Portrait Frame with Clickable Modal -->
+  <div class="portrait-frame">
+    <img src="https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/d07301d278871e99761a3d4e5619da40d7c4720a/images/nana.jpg?raw=true" 
+         alt="Nana Abornubea Atoanepe I" 
+         onclick="openModal(this)">
+  </div>
+
+  <!-- Leader Meta -->
+  <div class="leader-meta">
+    <h3>Nana Abornubea Atoanepe I</h3>
+    <div class="title">Asafohemaa of Bowiri-Kwamekrom</div>
+  </div>
+
+  <!-- Biography Wrap -->
+  <div class="bio-wrap">
+    <div class="bio-content" aria-expanded="false">
+      <p>Nana Abornubea Atoanepe I, known in private life as Betty Ama Serwaa Mensah-Yeguo, is the Asafohemaa of Bowiri-Kwamekrom. She was born to Mr. Michael Yao Mensah-Yeguo of the Odefet Clan in Bowiri-Kwamekrom (of blessed memory) and Madam Mary Judith Mensah Yeguo (née Appiah) of the Nyatetor Clan in Bowiri Takrabe.</p>
+      <p>She started her formal education at Forces Primary School at Recee Barracks, Burma Camp (Accra) from 1977 to 1982, then attended Mawuli Secondary School (now Senior High) from 1984 to 1989, where she obtained her Ordinary Level Certificate (O. Level). She furthered her studies at Workers’ College (1990–1991), Peki Training College (GOVCO, now College of Education) from 1994 to 1996/1997, and later the University of Education, Winneba.</p>
+      <p>She currently teaches at Emmanuel Presbyterian School, Dansoman, Greater Accra Region. Nana Abornubea Atoanepe I has one adopted daughter and two grandchildren.</p>
+    </div>
+    <div class="bio-fade" aria-hidden="true"></div>
+    <button class="read-toggle">Read more</button>
+  </div>
+</article>
+
+<!-- Modal Structure -->
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modal-img">
+  <div id="caption"></div>
+</div>
+
+<!-- Modal CSS -->
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+    animation: zoom 0.3s;
+  }
+
+  @keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+  }
+
+  #caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+
+<!-- Modal JavaScript -->
+<script>
+  function openModal(img) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modal-img");
+    var caption = document.getElementById("caption");
+
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    caption.innerHTML = img.alt;
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+</script>
+
+
         <div class="leader-meta">
           <h3>Nana Yaa Sikebea II</h3>
           <div class="title">Kyidomhemaa (Divisional Queenmother)</div>
