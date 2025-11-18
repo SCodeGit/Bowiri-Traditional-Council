@@ -232,59 +232,7 @@
     <h1>Leadership</h1>
     <p>Traditional leaders and queenmothers of Bowiri Traditional Area. Click “Read more” to expand the full biography inline.</p>
 </section>
-<!-- CATEGORY FILTER PANEL -->
-<section class="category-filter">
-  <h2>Filter Leadership Categories</h2>
-  <p>Click a button to show only that category or show all.</p>
-  <div class="filter-buttons">
-    <button onclick="showCategory('paramount')">Paramount Chief</button>
-    <button onclick="showCategory('subdivisional')">Sub-Divisional Chiefs</button>
-    <button onclick="showCategory('queenmothers')">Divisional Queenmothers</button>
-    <button onclick="showCategory('asafohemaa')">Asafohemaa</button>
-    <button onclick="showCategory('all')">Show All</button>
-  </div>
-</section>
 
-<script>
-// Function to show only the selected category and hide others
-function showCategory(category) {
-  const categories = ['paramount', 'subdivisional', 'queenmothers', 'asafohemaa'];
-  categories.forEach(id => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    if (category === 'all') {
-      el.style.display = 'block';
-    } else {
-      el.style.display = (id === category) ? 'block' : 'none';
-    }
-  });
-}
-</script>
-
-<style>
-.category-filter {
-  margin-bottom: 20px;
-  padding: 12px;
-  background: #f0f0f0;
-  border-radius: 8px;
-}
-.category-filter h2 {
-  margin-top: 0;
-}
-.filter-buttons button {
-  margin: 4px;
-  padding: 8px 12px;
-  background: linear-gradient(to right, #FFD700, #FF4500);
-  color: #071228;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.2s;
-}
-.filter-buttons button:hover {
-  transform: scale(1.05);
-}
 </style>
 
 <section class="page-content">
