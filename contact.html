@@ -1,37 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — Bowiri Traditional Council</title>
-  <meta name="description" content="Bowiri Traditional Council — heritage, leadership, projects and community support." />
+  <meta name="description" content="Bowiri Traditional Council — heritage, leadership, projects and community support.">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  
+
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 
+  <link rel="stylesheet" href="css/style.css">
+
   <style>
-    /* Royal gold to red gradient links */
-    .nav-link-gold {
+    body {
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    /* Header */
+    .site-header {
+      padding: 20px 0;
+      text-align: center;
+    }
+    .site-header img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+    .brand-text {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #FFD700;
+      vertical-align: middle;
+    }
+
+    /* Navigation */
+    #page-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    #page-nav ul li a {
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
-      background: linear-gradient(90deg, #FFD700, #B22222); /* gold to red blend */
+      font-weight: 600;
+      font-size: 1em;
+      background: linear-gradient(90deg, #FFD700, #B22222);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      transition: transform 0.2s;
+      transition: transform 0.2s ease;
     }
-    .nav-link-gold:hover {
+    #page-nav ul li a:hover,
+    #page-nav ul li a.active {
       transform: scale(1.1);
     }
 
-    /* Back to Top */
+    /* Main Content */
+    .page-main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .page-header h1 {
+      font-size: 2.2em;
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .content-block h2, .content-block h3 {
+      color: #f5f5dc;
+    }
+    .content-block p, .content-block a {
+      color: #dddddd;
+    }
+    .contact-form input, 
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #555;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+    .contact-form button {
+      background-color: #800000;
+      color: #FFD700;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .contact-form button:hover {
+      background-color: #A00000;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid #333;
+      padding: 20px 0;
+      text-align: center;
+      background: #0a0a0a;
+      margin-top: 40px;
+    }
+    .site-footer img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .site-footer a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+
+    /* Back to Top Button */
     #back-to-top {
       position: fixed;
       bottom: 40px;
@@ -55,88 +152,70 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
-  <div class="container header-inner" style="text-align:center;">
-    <a href="index.html" class="brand" style="display:inline-block;">
-      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" 
-           alt="Bowiri Traditional Council Logo" class="logo-img" style="width:50px; height:50px; border-radius:50%;">
-      <span class="brand-text" style="display:block; font-weight:bold; font-size:1.4em;">Bowiri Traditional Council</span>
-    </a>
+  <a href="index.html" class="brand">
+    <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" alt="Bowiri Logo">
+    <span class="brand-text">Bowiri Traditional Council</span>
+  </a>
 
-    <!-- Horizontal Pages -->
-    <nav id="page-nav" style="text-align:center; margin-top:10px;">
-      <ul style="list-style:none; padding:0; margin:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px;">
-        <li><a href="index.html" class="nav-link-gold">Home</a></li>
-        <li><a href="about.html" class="nav-link-gold">About</a></li>
-        <li><a href="projects.html" class="nav-link-gold">Projects & Support</a></li>
-        <li><a href="leadership.html" class="nav-link-gold">Leadership</a></li>
-        <li><a href="contact.html" class="nav-link-gold">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav id="page-nav">
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- MAIN -->
-<main class="page-main container">
-  <section class="page-header reveal">
+<main class="page-main">
+  <section class="page-header">
     <h1>Contact</h1>
   </section>
 
-  <section class="page-content">
-    <div class="content-block reveal">
-      <h2>Contact the Palace</h2>
-      <p>For enquiries, donations, or appointments, use the form or the contact details below.</p>
+  <section class="content-block">
+    <h2>Contact the Palace</h2>
+    <p>For enquiries, donations, or appointments, use the form or the contact details below.</p>
 
-      <form id="contact-form" class="contact-form">
-        <label for="name">Full name</label>
-        <input id="name" name="name" type="text" required>
+    <form id="contact-form" class="contact-form">
+      <label for="name">Full Name</label>
+      <input id="name" name="name" type="text" required>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+      <button type="submit">Send Message</button>
+    </form>
 
-      <div class="contact-details reveal" style="margin-top:20px;">
-        <p><strong>Palace Office</strong></p>
-        <p>P. O. Box 123, Bowiri</p>
-        <p>Email: <a href="mailto:info@bowiri.org">info@bowiri.org</a></p>
-        <p>Phone: +233 20 000 0000</p>
-        <h3>Location</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.910174679781!2d-0.1969!3d5.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102079d564bc8e8f%3A0x4639b825f17ecf7e!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1694700000000!5m2!1sen!2sgh" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
-      </div>
+    <div class="contact-details" style="margin-top:20px;">
+      <p><strong>Palace Office</strong></p>
+      <p>P. O. Box 123, Bowiri</p>
+      <p>Email: <a href="mailto:info@bowiri.org">info@bowiri.org</a></p>
+      <p>Phone: +233 20 000 0000</p>
+      <h3>Location</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.910174679781!2d-0.1969!3d5.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102079d564bc8e8f%3A0x4639b825f17ecf7e!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1694700000000!5m2!1sen!2sgh" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
     </div>
   </section>
 </main>
 
-<!-- FOOTER -->
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-left">
-      <a href="index.html">
-        <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" 
-             alt="Bowiri Traditional Council" class="footer-logo" style="width:30px; height:30px; border-radius:50%;">
-      </a>
-      <p>© <span id="year"></span> Bowiri Traditional Council — All rights reserved.</p>
-    </div>
-    <div class="footer-right">
-      <p>Website crafted by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
-    </div>
-  </div>
+  <a href="index.html">
+    <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" alt="Bowiri Traditional Council">
+  </a>
+  <p>© <span id="year"></span> Bowiri Traditional Council — All rights reserved.</p>
+  <p>Website crafted by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
 </footer>
 
-<!-- Back to Top Button -->
-<button id="back-to-top" title="Back to Top">↑</button>
+<button id="back-to-top">↑</button>
 
 <script>
-  // Auto year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Back to Top
   const backToTop = document.getElementById("back-to-top");
   window.addEventListener("scroll", () => {
     backToTop.style.display = window.scrollY > 200 ? "block" : "none";
