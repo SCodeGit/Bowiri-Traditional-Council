@@ -4,15 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects & Support — Bowiri Traditional Council</title>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects & Support — Bowiri Traditional Council</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 
   <!-- Fonts -->
@@ -28,7 +22,16 @@
       scroll-behavior: smooth;
     }
 
-    /* Navbar */
+    /* NAVIGATION */
+    #page-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
     #page-nav ul li a {
       font-weight: bold;
       font-size: 1.1em;
@@ -42,6 +45,7 @@
       transform: scale(1.05);
     }
 
+    /* HEADER */
     .site-header {
       text-align: center;
       padding: 15px 0;
@@ -51,32 +55,25 @@
       height: 50px;
       border-radius: 50%;
     }
-    #page-nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0 0 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
+    .brand-text {
+      color: #FFD700;
+      font-weight: 600;
+      margin-top: 5px;
     }
 
-    /* Headings */
+    /* HEADINGS */
     .content-block h1 {
       color: #f5f5dc;
       font-size: 2em;
       margin-bottom: 10px;
       text-align: center;
     }
-
     h2 {
       color: #FFD700;
       text-align: center;
       margin-top: 60px;
       position: relative;
     }
-
-    /* Gold divider */
     h2::after {
       content: "";
       display: block;
@@ -88,7 +85,7 @@
       opacity: 0.8;
     }
 
-    /* Project grid */
+    /* PROJECT GRID */
     .project-list {
       display: flex;
       flex-wrap: wrap;
@@ -96,10 +93,9 @@
       margin-top: 30px;
       justify-content: center;
     }
-
     .project-card {
       flex: 1 1 300px;
-      background: rgba(26, 26, 26, 0.9);
+      background: #1a1a1a;
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 4px 8px rgba(255, 215, 0, 0.05);
@@ -107,23 +103,16 @@
       opacity: 0;
       transform: translateY(40px);
     }
-
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 14px rgba(255, 215, 0, 0.2);
+    }
     .project-card h3 {
       color: #FFD700;
       margin-top: 0;
     }
 
-    .project-card p {
-      color: #f0f0f0;
-      font-size: 0.95em;
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 14px rgba(255, 215, 0, 0.2);
-    }
-
-    /* Donation section */
+    /* DONATION BOX */
     .donation-box {
       background: #1a1a1a;
       padding: 30px;
@@ -133,9 +122,6 @@
       text-align: center;
       opacity: 0;
       transform: translateY(50px);
-    }
-    .donation-box h2 {
-      color: #FFD700;
     }
     .btn-gradient {
       background: linear-gradient(90deg, #FFD700, #B22222);
@@ -154,7 +140,7 @@
       transform: scale(1.05);
     }
 
-    /* Footer */
+    /* FOOTER */
     .site-footer {
       padding: 15px 0;
       text-align: center;
@@ -162,12 +148,14 @@
       color: #f5f5f5;
       border-top: 1px solid #333;
     }
-    .site-footer a {
-      color: #FFD700;
-      text-decoration: none;
+    .site-footer img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      margin-bottom: 5px;
     }
 
-    /* Scroll fade-in animation */
+    /* ANIMATION */
     .fade-in {
       animation: fadeUp 1.2s forwards;
     }
@@ -179,12 +167,15 @@
 </head>
 
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <a href="index.html" class="brand">
-      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" alt="Bowiri Logo" class="logo-img">
+      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" class="logo-img">
       <div class="brand-text">Bowiri Traditional Council</div>
     </a>
 
+    <!-- NAVIGATION -->
     <nav id="page-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -196,359 +187,80 @@
     </nav>
   </header>
 
+
+  <!-- MAIN CONTENT -->
   <main class="container">
     <section class="content-block">
       <h1>Community Projects & Development</h1>
       <p style="text-align:center;">Under the leadership of <strong>Nana Osiadieyor Kwabena Salo V</strong></p>
 
-      <!-- Completed -->
+
+      <!-- COMPLETED PROJECTS -->
       <h2>Completed Projects</h2>
       <div class="project-list">
-        <div class="project-card fade">
-          <h3>Educational Support Initiative</h3>
-          <p>Scholarships and learning resources for students across Bowiri.</p>
-        </div>
-        <div class="project-card fade">
-          <h3>Road Rehabilitation & Access Development</h3>
-          <p>Major feeder roads improved to enhance trade and mobility.</p>
-        </div>
-        <div class="project-card fade">
-          <h3>Security and Health Infrastructure</h3>
-          <p>Police stations and community health centers completed for welfare and safety.</p>
-        </div>
-        <div class="project-card fade">
-          <h3>Cultural Heritage & Festival Unification</h3>
-          <p>Annual festivals unified to strengthen Bowiri identity and heritage.</p>
-        </div>
+        <div class="project-card fade"><h3>Educational Support Initiative</h3><p>Scholarships and learning resources for students across Bowiri.</p></div>
+        <div class="project-card fade"><h3>Road Rehabilitation & Access Development</h3><p>Major feeder roads improved to enhance trade and mobility.</p></div>
+        <div class="project-card fade"><h3>Security & Health Infrastructure</h3><p>Police stations and health centers completed for welfare and safety.</p></div>
+        <div class="project-card fade"><h3>Cultural Heritage & Festival Unification</h3><p>Festivals unified to strengthen Bowiri identity.</p></div>
       </div>
 
-      <!-- Ongoing -->
+
+      <!-- ONGOING PROJECTS -->
       <h2>Ongoing Projects</h2>
       <div class="project-list">
-        <div class="project-card fade">
-          <h3>Administrative Complex Construction</h3>
-          <p>New BTC headquarters under construction alongside Biakoye Council renovation.</p>
-        </div>
-        <div class="project-card fade">
-          <h3>Royal Palace Development</h3>
-          <p>A new palace under construction to serve as a cultural and administrative center.</p>
-        </div>
-        <div class="project-card fade">
-          <h3>Community Event Centers</h3>
-          <p>Multipurpose halls to support local gatherings and economic activities.</p>
-        </div>
-        <div class="project-card fade">
-          <h3>Market Modernization</h3>
-          <p>Developing modernized markets across towns for safer trade environments.</p>
-        </div>
-        <div class="project-card fade">
-          <h3>Job Creation Initiative</h3>
-          <p>Factories, guesthouses, and pharmacies under development to create employment.</p>
-        </div>
+        <div class="project-card fade"><h3>Administrative Complex</h3><p>New BTC headquarters under construction.</p></div>
+        <div class="project-card fade"><h3>Royal Palace Development</h3><p>New palace serving cultural and administrative purposes.</p></div>
+        <div class="project-card fade"><h3>Community Event Centers</h3><p>Halls to support gatherings and economic activities.</p></div>
+        <div class="project-card fade"><h3>Market Modernization</h3><p>Safer, organized market structures across Bowiri.</p></div>
+        <div class="project-card fade"><h3>Job Creation Initiative</h3><p>Factories, guesthouses, pharmacies under development.</p></div>
       </div>
 
-      <!-- Planned -->
+
+      <!-- PLANNED PROJECTS -->
       <h2>Planned Projects</h2>
       <div class="project-list">
-        <div class="project-card fade">
-          <h3>Bowiri District Project</h3>
-          <p>Strategic plan to create an official Bowiri District for accelerated development.</p>
-        </div>
-        <div class="project-card fade">
-          <h3>Bowiri Heritage Foundation</h3>
-          <p>Planned cultural fund to preserve traditions and finance educational growth.</p>
-        </div>
-        <div class="project-card fade">
-          <h3>Telecommunication Expansion</h3>
-          <p>Partnership with MTN for improved network reliability across the enclave.</p>
-        </div>
-        <div class="project-card fade">
-          <h3>Community Stadium & Industrial Projects</h3>
-          <p>Future stadium and light industrial park planned to promote youth and tourism.</p>
-        </div>
+        <div class="project-card fade"><h3>Bowiri District Project</h3><p>Strategic proposal for creating an official district.</p></div>
+        <div class="project-card fade"><h3>Bowiri Heritage Foundation</h3><p>A cultural fund to preserve heritage and support education.</p></div>
+        <div class="project-card fade"><h3>Telecommunication Expansion</h3><p>Partnership with MTN for improved connectivity.</p></div>
+        <div class="project-card fade"><h3>Stadium & Industrial Projects</h3><p>Future stadium and light industrial park.</p></div>
       </div>
 
-      <!-- Donation -->
+
+      <!-- DONATION -->
       <section class="donation-box fade">
         <h2>Support Our Developmental Vision</h2>
-        <p>Your support drives our mission — from education and infrastructure to culture and welfare. Join us in building a stronger Bowiri.</p>
+        <p>Your support drives our mission — from education and infrastructure to culture and welfare.</p>
 
-        <h3>Ways to Donate:</h3>
+        <h3>Ways to Donate</h3>
         <ul>
-          <li><strong>Mobile Money:</strong> 0244-XXX-XXX (Bowiri Dev. Fund)</li>
-          <li><strong>Bank Transfer:</strong> Bowiri Traditional Council Fund — GCB Bank, Jasikan Branch</li>
+          <li><strong>Mobile Money:</strong> 0244-XXX-XXX</li>
+          <li><strong>Bank:</strong> GCB Bank — Jasikan Branch</li>
         </ul>
 
         <a href="contact.html" class="btn-gradient">Contact Us for Partnerships</a>
       </section>
+
     </section>
   </main>
 
+
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div>
-      <a href="index.html">
-        <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" alt="Bowiri Logo" style="width:42px;height:42px;">
-      </a>
-      © 2025 Bowiri Traditional Council — All Rights Reserved
-      <div>
-        <a href="projects.html">Projects</a> |
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+    <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
+    © 2025 Bowiri Traditional Council — All Rights Reserved
+    <div><a href="projects.html">Projects</a> | <a href="contact.html">Contact</a></div>
   </footer>
 
-  <!-- Animation Script -->
+
+  <!-- ANIMATION SCRIPT -->
   <script>
     const fadeElements = document.querySelectorAll('.fade, .donation-box');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('fade-in');
       });
     }, { threshold: 0.2 });
-
     fadeElements.forEach(el => observer.observe(el));
-  </script>
-</body>
-</html>
-
-  <!-- Favicon for desktop and mobile -->
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* Dark background for entire page */
-    body {
-      background-color: #0a0a0a;
-      color: #f5f5f5;
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Royal gold → red gradient for page links */
-    #page-nav ul li a {
-      font-weight: bold;
-      font-size: 1.1em;
-      text-decoration: none;
-      background: linear-gradient(90deg, #FFD700, #B22222);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: transform 0.2s;
-    }
-    #page-nav ul li a:hover {
-      transform: scale(1.05);
-    }
-
-    /* Header and nav */
-    .site-header {
-      text-align: center;
-      padding: 15px 0;
-    }
-    .site-header img.logo-img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-    }
-    #page-nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0 0 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    /* Main content heading */
-    .content-block h1 {
-      color: #f5f5dc; /* soft cream for dark background */
-      font-size: 2em;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    /* Project cards */
-    .project-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-      justify-content: center;
-    }
-    .project-card {
-      flex: 1 1 300px;
-      background: #1a1a1a;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(255,215,0,0.3);
-    }
-    .project-card h3 {
-      margin-top: 0;
-      color: #FFD700; /* gold heading for cards */
-    }
-    .project-card p {
-      color: #f0f0f0;
-    }
-
-    /* Donation box */
-    .donation-box {
-      background: #1a1a1a;
-      padding: 25px;
-      border-radius: 12px;
-      margin-top: 40px;
-      box-shadow: 0 4px 8px rgba(255,215,0,0.2);
-      text-align: center;
-    }
-    .donation-box h2 {
-      color: #FFD700; /* gold for donation title */
-    }
-    .donation-box p, .donation-box ul li {
-      color: #f5f5f5;
-    }
-    .donation-box ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .btn-gradient {
-      background: linear-gradient(90deg, #FFD700, #B22222);
-      color: #fff;
-      border: none;
-      padding: 12px 25px;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 15px;
-      transition: transform 0.2s;
-    }
-    .btn-gradient:hover {
-      transform: scale(1.05);
-    }
-
-    /* Footer */
-    .site-footer {
-      padding: 15px 0;
-      text-align: center;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      border-top: 1px solid #333;
-    }
-    .site-footer img {
-      vertical-align: middle;
-      margin-right: 10px;
-      border-radius: 50%;
-    }
-    .site-footer a {
-      color: #FFD700;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header class="site-header">
-    <a href="index.html" class="brand">
-      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" alt="Bowiri Logo" class="logo-img">
-      <div class="brand-text">Bowiri Traditional Council</div>
-    </a>
-
-    <!-- Horizontal Pages -->
-    <nav id="page-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects & Support</a></li>
-        <li><a href="leadership.html">Leadership</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main class="container">
-    <section class="content-block reveal">
-      <h1>Community Projects & Development</h1>
-      <p style="text-align:center;">Empowering the Bowiri land through sustainable progress and cultural unity.</p>
-
-      <!-- Project Cards -->
-      <div class="project-list">
-        <div class="project-card reveal">
-          <h3>1. Bowiri Educational Support Initiative</h3>
-          <p>This project provides scholarships and learning resources to deserving students within the Bowiri enclave, ensuring that no child is left behind due to financial constraints.</p>
-        </div>
-
-        <div class="project-card reveal">
-          <h3>2. Road Rehabilitation & Access Development</h3>
-          <p>Through community-driven partnerships, major feeder roads have been rehabilitated to improve trade, mobility, and access to essential services.</p>
-        </div>
-
-        <div class="project-card reveal">
-          <h3>3. Bowiri Cultural Heritage Center</h3>
-          <p>A preservation hub for local art, history, and oral traditions. The center promotes cultural pride, tourism, and serves as a resource for youth education.</p>
-        </div>
-      </div>
-
-      <!-- Donation Section -->
-      <section class="donation-box reveal">
-        <h2>Support Our Developmental Vision</h2>
-        <p>Contributions help advance our mission — from education to infrastructure and cultural preservation. Join us in building a stronger Bowiri for generations to come.</p>
-
-        <h3>Ways to Donate:</h3>
-        <ul>
-          <li><strong>Mobile Money:</strong> 0244-XXX-XXX (Bowiri Dev. Fund)</li>
-          <li><strong>Bank Transfer:</strong> Bowiri Traditional Council Fund — GCB Bank, Jasikan Branch</li>
-        </ul>
-
-        <a href="contact.html" class="btn-gradient">Contact Us for Partnerships</a>
-      </section>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div>
-      <a href="index.html">
-        <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" alt="Bowiri Logo" style="width:42px;height:42px;">
-      </a>
-      © 2025 Bowiri Traditional Council — All Rights Reserved
-      <div>
-        <a href="projects.html">Projects</a> |
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Reveal Script -->
-  <script>
-    const reveals = document.querySelectorAll('.reveal');
-    const revealOnScroll = () => {
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const revealTop = reveals[i].getBoundingClientRect().top;
-        const revealPoint = 100;
-        if (revealTop < windowHeight - revealPoint) {
-          reveals[i].style.opacity = 1;
-          reveals[i].style.transform = 'translateY(0)';
-        }
-      }
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
   </script>
 
 </body>
