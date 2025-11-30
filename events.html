@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Events & Gallery — Bowiri Traditional Council</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
+
+  <style>
+    body {
+      background:#0a0a0a;
+      color:#f5f5f5;
+      font-family:'Poppins',sans-serif;
+      margin:0;
+    }
+
+    /* Header */
+    .site-header { text-align:center; padding:15px 0; }
+    .site-header img { width:50px; height:50px; border-radius:8px; }
+    .brand-text { font-weight:700; font-size:1.5em; color:#FFD700; margin-left:10px; }
+
+    /* Navigation */
+    #page-nav ul {
+      list-style:none; margin:10px 0 0; padding:0;
+      display:flex; justify-content:center; gap:15px;
+    }
+    #page-nav ul li a {
+      font-weight:600; text-decoration:none;
+      background:linear-gradient(90deg,#FFD700,#B22222);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    /* Header title */
+    .page-header h1 {
+      text-align:center; 
+      font-size:2.5em;
+      margin-top:20px;
+      color:#FFD700;
+    }
+
+    /* Gallery grid */
+    .video-gallery {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+      padding:20px;
+    }
+
+    .video-card {
+      background:#111; 
+      padding:15px; 
+      border-radius:10px;
+      border:1px solid #333;
+      box-shadow:0 0 10px rgba(0,0,0,0.4);
+    }
+
+    video {
+      width:100%;
+      border-radius:10px;
+      outline:none;
+    }
+
+    .video-title {
+      margin-top:10px;
+      font-weight:600;
+      color:#f5f5dc;
+      text-align:center;
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top:40px;
+      padding:15px 0;
+      text-align:center;
+      border-top:1px solid #222;
+      color:#f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html">
+    <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg">
+    <span class="brand-text">Bowiri Traditional Council</span>
+  </a>
+
+  <nav id="page-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="leadership.html">Leadership</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- TITLE -->
+<div class="page-header">
+  <h1>Events & Video Gallery</h1>
+</div>
+
+<!-- VIDEO GALLERY -->
+<section class="video-gallery">
+
+  <!-- VIDEO BLOCK -->
+  <div class="video-card">
+    <video controls>
+      <source src="https://raw.githubusercontent.com/YOUR_REPO/PATH/TO/VIDEO.mp4" type="video/mp4">
+    </video>
+    <p class="video-title">Event Title Here</p>
+  </div>
+
+  <!-- DUPLICATE FOR MORE VIDEOS -->
+  <div class="video-card">
+    <video controls>
+      <source src="https://raw.githubusercontent.com/YOUR_REPO/PATH/TO/VIDEO2.mp4" type="video/mp4">
+    </video>
+    <p class="video-title">Cultural Performance</p>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="https://raw.githubusercontent.com/YOUR_REPO/PATH/TO/VIDEO3.mp4" type="video/mp4">
+    </video>
+    <p class="video-title">Festival Highlights</p>
+  </div>
+
+</section>
+
+<footer class="site-footer">
+  © <span id="year"></span> Bowiri Traditional Council — All Rights Reserved.
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
