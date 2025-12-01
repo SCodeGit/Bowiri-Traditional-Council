@@ -1,204 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Events — Bowiri Traditional Council</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
+  <meta name="description" content="Traditional events, festivals, community gatherings and cultural heritage of Bowiri.">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 
   <style>
     body {
       background-color: #0a0a0a;
       color: #f5f5f5;
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
     }
 
-    /* Header & Navigation */
+    /* Header */
     .site-header {
+      padding: 20px 0;
       text-align: center;
-      padding: 15px 0;
     }
-    .site-header img.logo-img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+    .site-header img {
+      width: 55px;
+      height: 55px;
+      border-radius: 8px;
+      vertical-align: middle;
     }
+    .brand-text {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #FFD700;
+      vertical-align: middle;
+    }
+
+    /* Navigation */
     #page-nav ul {
       list-style: none;
       padding: 0;
-      margin: 10px 0 0 0;
+      margin: 15px 0 0;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 20px;
+      flex-wrap: wrap;
     }
     #page-nav ul li a {
-      font-weight: bold;
-      font-size: 1.1em;
       text-decoration: none;
+      font-weight: 600;
+      font-size: 1em;
       background: linear-gradient(90deg, #FFD700, #B22222);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: transform 0.2s;
     }
-    #page-nav ul li a:hover {
-      transform: scale(1.05);
+    #page-nav ul li a:hover,
+    #page-nav ul li a.active {
+      transform: scale(1.1);
     }
 
-    /* Main heading */
-    .content-block h1 {
-      color: #f5f5dc;
-      font-size: 2em;
-      margin-bottom: 10px;
+    /* Page Title */
+    .page-header h1 {
       text-align: center;
+      font-size: 2.2em;
+      color: #FFD700;
+      margin-top: 25px;
     }
 
-    /* Video gallery */
+    /* Video Cards */
     .video-gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 25px;
       justify-content: center;
-      margin-top: 30px;
+      max-width: 1100px;
+      margin: 40px auto;
     }
+
     .video-card {
-      background: rgba(26, 26, 26, 0.9);
-      border-radius: 12px;
-      padding: 10px;
+      background: #111;
       width: 320px;
-      box-shadow: 0 4px 8px rgba(255,215,0,0.05);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(255,215,0,0.15);
       transition: transform 0.3s, box-shadow 0.3s;
-      opacity: 0;
-      transform: translateY(40px);
     }
+
     .video-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 14px rgba(255,215,0,0.2);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(255,215,0,0.3);
     }
-    .video-card h3 {
-      color: #FFD700;
-      font-size: 1.1em;
-      margin: 10px 0;
-      text-align: center;
-    }
+
     .video-card video {
       width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
+    }
+
+    .video-card h3 {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 1.1em;
+      color: #FFD700;
+      font-weight: 600;
     }
 
     /* Footer */
     .site-footer {
-      padding: 15px 0;
-      text-align: center;
-      background: #0a0a0a;
-      color: #f5f5f5;
       border-top: 1px solid #333;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 50px;
     }
     .site-footer img {
-      vertical-align: middle;
-      margin-right: 10px;
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
+      margin-bottom: 10px;
     }
     .site-footer a {
-      color: #FFD700;
       text-decoration: none;
-    }
-
-    /* Scroll reveal */
-    .fade-in {
-      animation: fadeUp 1.2s forwards;
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      color: #FFD700;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <a href="index.html" class="brand">
-      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" alt="Bowiri Logo" class="logo-img">
-      <div class="brand-text">Bowiri Traditional Council</div>
-    </a>
+<!-- HEADER -->
+<header class="site-header">
+  <a href="index.html" class="brand">
+    <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo">
+    <span class="brand-text">Bowiri Traditional Council</span>
+  </a>
 
-    <nav id="page-nav">
-      <ul>
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="leadership.html" class="nav-link">Leadership</a></li>
-        <li><a href="events.html" class="nav-link active">Events</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav id="page-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="leadership.html">Leadership</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- MAIN CONTENT -->
-  <main class="container">
-    <section class="content-block">
-      <h1>Events & Community Programs</h1>
-      <p style="text-align:center;">Experience our cultural festivals, development programs, and community gatherings through videos.</p>
+<!-- PAGE TITLE -->
+<div class="page-header">
+  <h1>Events & Activities</h1>
+</div>
 
-      <div class="video-gallery">
-        <div class="video-card fade">
-          <h3>Annual Bowiri Festival 2024</h3>
-          <video controls>
-            <source src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/7915c496a0c0bac451f8f438ae3c512ebbec42d9/WhatsApp%20Video%202025-11-30%20at%2010.50.15_66e8fd12.mp4
-" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
+<!-- VIDEO CARDS -->
+<div class="video-gallery">
 
-        <div class="video-card fade">
-          <h3>Community Health Outreach</h3>
-          <video controls>
-            <source src="https://raw.githubusercontent.com/YourGitHubUsername/YourRepo/main/videos/healthoutreach.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
+  <div class="video-card">
+    <video src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/7915c496a0c0bac451f8f438ae3c512ebbec42d9/WhatsApp%20Video%202025-11-30%20at%2010.50.15_66e8fd12.mp4
+" controls></video>
+    <h3>Celebration of Yam Festival</h3>
+  </div>
 
-        <div class="video-card fade">
-          <h3>Educational Support Program</h3>
-          <video controls>
-            <source src="https://raw.githubusercontent.com/YourGitHubUsername/YourRepo/main/videos/education.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </section>
-  </main>
+  <div class="video-card">
+    <video src="YOUR_VIDEO_LINK_2.mp4" controls></video>
+    <h3>Chief's Durbar — Community Gathering</h3>
+  </div>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <a href="index.html">
-      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" alt="Bowiri Logo" style="width:42px;height:42px;">
-    </a>
-    © 2025 Bowiri Traditional Council — All Rights Reserved
-  </footer>
+  <div class="video-card">
+    <video src="YOUR_VIDEO_LINK_3.mp4" controls></video>
+    <h3>Cultural Dance Performance</h3>
+  </div>
 
-  <!-- Reveal Script -->
-  <script>
-    const fadeElements = document.querySelectorAll('.fade');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        }
-      });
-    }, { threshold: 0.2 });
-    fadeElements.forEach(el => observer.observe(el));
-  </script>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg">
+  <p>&copy; 2025 Bowiri Traditional Council. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
-
