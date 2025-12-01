@@ -19,6 +19,36 @@
     box-shadow: 0 0 0 2px #8B0000; /* deep red outer ring */
   }
 </style>
+  <style>
+/* General page background and text override */
+body, html {
+  background-color: #000000 !important; /* black background */
+  color: #ffffff !important;           /* white text */
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Override all headings and paragraphs */
+h1, h2, h3, h4, h5, h6, p, span, li, a {
+  color: #FFD700 !important; /* gold text */
+}
+
+/* Override card-like elements (divs with border-radius or custom classes) */
+div, section, article, .card, .video-card {
+  background-color: #000000 !important; /* black background */
+  color: #FFD700 !important;            /* gold text */
+  border: 2px solid #FFD700 !important; /* gold border if any */
+  box-shadow: 0 4px 10px rgba(255,215,0,0.2) !important;
+}
+
+/* Optional: links everywhere */
+a {
+  color: #FFD700 !important;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffffff !important;
+}
+</style>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Leadership — Bowiri Traditional Council</title>
@@ -199,7 +229,6 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
-
   </ul>
 </nav>
 
