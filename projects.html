@@ -14,9 +14,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg-color: #000000;
+      --text-color: #FFD700;
+      --card-bg: #000000;
+      --card-border: #FFD700;
+      --btn-gradient-start: #FFD700;
+      --btn-gradient-end: #B22222;
+    }
+
     body {
-      background-color: #0a0a0a;
-      color: #f5f5f5;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
@@ -37,7 +46,7 @@
       font-weight: bold;
       font-size: 1.1em;
       text-decoration: none;
-      background: linear-gradient(90deg, #FFD700, #B22222);
+      background: linear-gradient(90deg, var(--btn-gradient-start), var(--btn-gradient-end));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: transform 0.2s;
@@ -57,20 +66,20 @@
       border-radius: 50%;
     }
     .brand-text {
-      color: #FFD700;
+      color: var(--text-color);
       font-weight: 600;
       margin-top: 5px;
     }
 
     /* HEADINGS */
     .content-block h1 {
-      color: #f5f5dc;
+      color: var(--text-color);
       font-size: 2em;
       margin-bottom: 10px;
       text-align: center;
     }
     h2 {
-      color: #FFD700;
+      color: var(--text-color);
       text-align: center;
       margin-top: 60px;
       position: relative;
@@ -80,7 +89,7 @@
       display: block;
       width: 100px;
       height: 3px;
-      background: linear-gradient(90deg, #FFD700, #B22222);
+      background: linear-gradient(90deg, var(--btn-gradient-start), var(--btn-gradient-end));
       margin: 10px auto 0;
       border-radius: 2px;
       opacity: 0.8;
@@ -96,10 +105,11 @@
     }
     .project-card {
       flex: 1 1 300px;
-      background: #1a1a1a;
+      background: var(--card-bg);
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 4px 8px rgba(255, 215, 0, 0.05);
+      border: 2px solid var(--card-border);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       opacity: 0;
       transform: translateY(40px);
@@ -109,13 +119,16 @@
       box-shadow: 0 6px 14px rgba(255, 215, 0, 0.2);
     }
     .project-card h3 {
-      color: #FFD700;
+      color: var(--text-color);
       margin-top: 0;
+    }
+    .project-card p {
+      color: var(--text-color);
     }
 
     /* DONATION BOX */
     .donation-box {
-      background: #1a1a1a;
+      background: var(--card-bg);
       padding: 30px;
       border-radius: 12px;
       margin-top: 60px;
@@ -123,9 +136,11 @@
       text-align: center;
       opacity: 0;
       transform: translateY(50px);
+      border: 2px solid var(--card-border);
+      color: var(--text-color);
     }
     .btn-gradient {
-      background: linear-gradient(90deg, #FFD700, #B22222);
+      background: linear-gradient(90deg, var(--btn-gradient-start), var(--btn-gradient-end));
       color: #fff;
       border: none;
       padding: 12px 25px;
@@ -145,9 +160,9 @@
     .site-footer {
       padding: 15px 0;
       text-align: center;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      border-top: 1px solid #333;
+      background: var(--bg-color);
+      color: var(--text-color);
+      border-top: 1px solid var(--card-border);
     }
     .site-footer img {
       width: 42px;
@@ -179,26 +194,21 @@
     <!-- NAVIGATION -->
     <nav id="page-nav">
       <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="leadership.html">Leadership</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="projects.html" class="active">Projects & Support</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="projects.html" class="active">Projects & Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-
 
   <!-- MAIN CONTENT -->
   <main class="container">
     <section class="content-block">
       <h1>Community Projects & Development</h1>
       <p style="text-align:center;">Under the leadership of <strong>Nana Osiadieyor Kwabena Salo V</strong></p>
-
 
       <!-- COMPLETED PROJECTS -->
       <h2>Completed Projects</h2>
@@ -208,7 +218,6 @@
         <div class="project-card fade"><h3>Security & Health Infrastructure</h3><p>Police stations and health centers completed for welfare and safety.</p></div>
         <div class="project-card fade"><h3>Cultural Heritage & Festival Unification</h3><p>Festivals unified to strengthen Bowiri identity.</p></div>
       </div>
-
 
       <!-- ONGOING PROJECTS -->
       <h2>Ongoing Projects</h2>
@@ -220,7 +229,6 @@
         <div class="project-card fade"><h3>Job Creation Initiative</h3><p>Factories, guesthouses, pharmacies under development.</p></div>
       </div>
 
-
       <!-- PLANNED PROJECTS -->
       <h2>Planned Projects</h2>
       <div class="project-list">
@@ -229,7 +237,6 @@
         <div class="project-card fade"><h3>Telecommunication Expansion</h3><p>Partnership with MTN for improved connectivity.</p></div>
         <div class="project-card fade"><h3>Stadium & Industrial Projects</h3><p>Future stadium and light industrial park.</p></div>
       </div>
-
 
       <!-- DONATION -->
       <section class="donation-box fade">
@@ -248,14 +255,12 @@
     </section>
   </main>
 
-
   <!-- FOOTER -->
   <footer class="site-footer">
     <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
     © 2025 Bowiri Traditional Council — All Rights Reserved
     <div><a href="projects.html">Projects</a> | <a href="contact.html">Contact</a></div>
   </footer>
-
 
   <!-- ANIMATION SCRIPT -->
   <script>
