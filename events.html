@@ -1,138 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Events — Bowiri Traditional Council</title>
-  <meta name="description" content="Traditional events, festivals, community gatherings and cultural heritage of Bowiri.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Events — Bowiri Traditional Council</title>
+<meta name="description" content="Traditional events, festivals, community gatherings and cultural heritage of Bowiri.">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 
-  <style>
-    body {
-      background-color: #0a0a0a;
-      color: #f5f5f5;
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-    }
+<style>
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gold: #FFD700;
+  --dark-overlay: rgba(0,0,0,0.7);
+}
 
-    /* Header */
-    .site-header {
-      padding: 20px 0;
-      text-align: center;
-    }
-    .site-header img {
-      width: 55px;
-      height: 55px;
-      border-radius: 8px;
-      vertical-align: middle;
-    }
-    .brand-text {
-      display: inline-block;
-      margin-left: 10px;
-      font-size: 1.6em;
-      font-weight: 700;
-      color: #FFD700;
-      vertical-align: middle;
-    }
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+}
 
-    /* Navigation */
-    #page-nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    #page-nav ul li a {
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1em;
-      background: linear-gradient(90deg, #FFD700, #B22222);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: transform 0.2s;
-    }
-    #page-nav ul li a:hover,
-    #page-nav ul li a.active {
-      transform: scale(1.1);
-    }
+/* HEADER */
+.site-header {
+  padding:20px 0;
+  text-align:center;
+}
 
-    /* Page Title */
-    .page-header h1 {
-      text-align: center;
-      font-size: 2.2em;
-      color: #FFD700;
-      margin-top: 25px;
-    }
+.brand img {
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  border:2px solid var(--gold);
+  vertical-align:middle;
+}
 
-    /* Video Cards */
-    .video-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      justify-content: center;
-      max-width: 1100px;
-      margin: 40px auto;
-    }
+.brand-text {
+  display:inline-block;
+  margin-left:10px;
+  font-size:1.6em;
+  font-weight:700;
+  color: var(--gold);
+  vertical-align:middle;
+}
 
-    .video-card {
-      background: #111;
-      width: 320px;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(255,215,0,0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+/* NAVIGATION */
+#page-nav ul {
+  list-style:none;
+  padding:0;
+  margin:15px 0 0;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
 
-    .video-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 18px rgba(255,215,0,0.3);
-    }
+#page-nav ul li a {
+  text-decoration:none;
+  font-weight:600;
+  font-size:1em;
+  color: var(--white);
+  transition: transform 0.2s, color 0.2s;
+}
 
-    .video-card video {
-      width: 100%;
-      border-radius: 10px;
-    }
+#page-nav ul li a:hover,
+#page-nav ul li a.active {
+  color: var(--gold);
+  transform: scale(1.1);
+}
 
-    .video-card h3 {
-      text-align: center;
-      margin-top: 12px;
-      font-size: 1.1em;
-      color: #FFD700;
-      font-weight: 600;
-    }
+/* PAGE TITLE */
+.page-header h1 {
+  text-align:center;
+  font-size:2.2em;
+  color: var(--gold);
+  margin-top:25px;
+}
 
-    /* Footer */
-    .site-footer {
-      border-top: 1px solid #333;
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 50px;
-    }
-    .site-footer img {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-    .site-footer a {
-      text-decoration: none;
-      color: #FFD700;
-    }
-  </style>
+/* VIDEO CARDS */
+.video-gallery {
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+  max-width:1100px;
+  margin:40px auto;
+}
+
+.video-card {
+  background: var(--black);
+  width:320px;
+  padding:15px;
+  border-radius:12px;
+  border:2px solid var(--gold);
+  box-shadow:0 4px 10px rgba(255,215,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow:0 8px 18px rgba(255,215,0,0.4);
+}
+
+.video-card video {
+  width:100%;
+  border-radius:10px;
+}
+
+.video-card h3 {
+  text-align:center;
+  margin-top:12px;
+  font-size:1.1em;
+  color: var(--gold);
+  font-weight:600;
+}
+
+/* FOOTER */
+.site-footer {
+  background: var(--black);
+  color: var(--white);
+  text-align:center;
+  padding:40px 0;
+  border-top:2px solid var(--gold);
+}
+
+.site-footer img {
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  border:2px solid var(--gold);
+  margin-bottom:10px;
+}
+
+.site-footer a {
+  text-decoration:none;
+  color: var(--gold);
+}
+
+.site-footer a:hover { color: var(--white); }
+
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <a href="index.html" class="brand">
     <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo">
@@ -151,17 +168,13 @@
   </nav>
 </header>
 
-<!-- PAGE TITLE -->
 <div class="page-header">
   <h1>Events & Activities</h1>
 </div>
 
-<!-- VIDEO CARDS -->
 <div class="video-gallery">
-
   <div class="video-card">
-    <video src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/7915c496a0c0bac451f8f438ae3c512ebbec42d9/WhatsApp%20Video%202025-11-30%20at%2010.50.15_66e8fd12.mp4
-" controls></video>
+    <video src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/7915c496a0c0bac451f8f438ae3c512ebbec42d9/WhatsApp%20Video%202025-11-30%20at%2010.50.15_66e8fd12.mp4" controls></video>
     <h3>Celebration of Yam Festival</h3>
   </div>
 
@@ -174,16 +187,16 @@
     <video src="YOUR_VIDEO_LINK_3.mp4" controls></video>
     <h3>Cultural Dance Performance</h3>
   </div>
-
 </div>
 
-<!-- FOOTER -->
 <footer class="site-footer">
-  <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg">
-  <p>&copy; 2025 Bowiri Traditional Council. All Rights Reserved.</p>
+  <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo">
+  <p>&copy; <span id="year"></span> Bowiri Traditional Council. All Rights Reserved.</p>
 </footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
-
-
