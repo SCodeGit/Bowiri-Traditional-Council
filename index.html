@@ -1,429 +1,258 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home — Bowiri Traditional Council</title>
-  <meta name="description" content="Bowiri Traditional Council — heritage, leadership, projects and community support." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home — Bowiri Traditional Council</title>
+<meta name="description" content="Bowiri Traditional Council — heritage, leadership, projects and community support.">
 
-<!-- Favicon for desktop and mobile -->
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" sizes="32x32">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 
-<!-- Optional: make it circular with royal gold/red border for modern browsers -->
 <style>
-  /* Applies only for browsers that respect mask-image / clip-path in favicons (mostly desktop) */
-  link[rel="icon"]::before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 2px solid #FFD700; /* gold */
-    box-shadow: 0 0 0 2px #8B0000; /* deep red outer ring */
-  }
-</style>
-
-
-  <style>
-    :root {
-      --royal-blue: #001f3f;
-      --gold: #c6a567;
-      --white: #ffffff;
-      --overlay-dark: rgba(0, 0, 0, 0.4);
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--royal-blue);
-      color: var(--white);
-    }
-
-    /* ===== HEADER ===== */
-    .site-header {
-      background: var(--royal-blue);
-      color: var(--white);
-      border-bottom: 2px solid var(--gold);
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .container {
-      width: 90%;
-      margin: 0 auto;
-      max-width: 1200px;
-    }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--white);
-    }
-
-    .brand img {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      margin-right: 10px;
-      border: 2px solid var(--gold);
-    }
-
-    .brand-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    #nav-toggle {
-      font-size: 1.8rem;
-      background: none;
-      color: var(--white);
-      border: none;
-      display: none;
-      cursor: pointer;
-    }
-
-    .main-nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    .main-nav a {
-      text-decoration: none;
-      color: var(--white);
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .main-nav a:hover {
-      color: var(--gold);
-    }
-
-    @media (max-width: 768px) {
-      #nav-toggle {
-        display: block;
-      }
-
-      .main-nav {
-        display: none;
-        flex-direction: column;
-        background: var(--royal-blue);
-        width: 100%;
-        text-align: center;
-        padding: 15px 0;
-      }
-
-      .main-nav.active {
-        display: flex;
-      }
-    }
-
-/* ===== HERO SECTION ===== */
-.hero {
-  --overlay-dark: rgba(10, 15, 15, 0.7); /* dark overlay */
-  background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
-              url('https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/78285f873566215cc6be9f0430e415e4dfa7d8b5/hero22.jpg?raw=true') 
-              center/cover no-repeat;
-  text-align: center;
-  padding: 120px 20px;
-  color: var(--ivory);
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gold: #FFD700;
+  --dark-overlay: rgba(0,0,0,0.7);
 }
 
-    .hero h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-      color: #ddd;
-    }
-
-    .hero a.btn {
-      display: inline-block;
-      padding: 12px 28px;
-      background-color: var(--gold);
-      color: var(--royal-blue);
-      border-radius: 30px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .hero a.btn:hover {
-      background-color: var(--white);
-      color: var(--royal-blue);
-    }
-
-    /* ===== CARDS ===== */
-    .highlights {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 20px;
-      padding: 60px 5%;
-    }
-
-    .card {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--royal-blue);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      transition: transform 0.4s;
-      text-align: center;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      color: var(--gold);
-    }
-
-    .card p {
-      padding: 0 15px 20px;
-    }
-
-    .card .link {
-      display: inline-block;
-      margin-bottom: 20px;
-      color: var(--gold);
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-  /* ===== FOOTER ===== */
-.site-footer {
-  background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
-              url('https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/58918c476245ef4de632bcabdd286896e14f8b7b/images/paramount%20chief.jpg?raw=true') 
-              center/cover no-repeat;
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background-color: var(--black);
   color: var(--white);
-  padding: 40px 0;
-  text-align: center;
+}
+
+/* HEADER */
+.site-header {
+  background: var(--black);
+  border-bottom: 2px solid var(--gold);
+  padding:10px 0;
+  text-align:center;
+  position: sticky;
+  top:0;
+  z-index:1000;
+}
+
+.brand {
+  display:inline-flex;
+  align-items:center;
+  text-decoration:none;
+  color: var(--white);
+}
+
+.brand img {
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  border:2px solid var(--gold);
+  margin-right:10px;
+}
+
+.brand-text {
+  font-family:'Playfair Display', serif;
+  font-weight:700;
+  font-size:1.3rem;
+  color: var(--white);
+}
+
+/* NAVIGATION */
+#page-nav ul {
+  list-style:none;
+  padding:0;
+  margin:10px 0;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+#page-nav .nav-link {
+  font-weight:bold;
+  font-size:1.1em;
+  text-decoration:none;
+  color: var(--white);
+  transition: transform 0.2s, color 0.2s;
+}
+
+#page-nav .nav-link:hover {
+  color: var(--gold);
+  transform: scale(1.1);
+}
+
+@media (max-width:600px){
+  #page-nav ul { gap:10px; }
+  #page-nav .nav-link { font-size:0.9em; }
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(var(--dark-overlay), var(--dark-overlay)),
+              url('https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/78285f873566215cc6be9f0430e415e4dfa7d8b5/hero22.jpg?raw=true') center/cover no-repeat;
+  text-align:center;
+  padding:120px 20px;
+  border-radius:10px;
+}
+
+.hero h2 {
+  font-family:'Playfair Display', serif;
+  font-size:2.2rem;
+  margin-bottom:10px;
+  color: var(--white);
+}
+
+.hero p {
+  font-size:1.1rem;
+  margin-bottom:25px;
+  color: #ddd;
+}
+
+.hero a.btn {
+  display:inline-block;
+  padding:12px 28px;
+  background-color: var(--gold);
+  color: var(--black);
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.hero a.btn:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/* HIGHLIGHT CARDS */
+.highlights {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+  gap:20px;
+  padding:60px 5%;
+}
+
+.card {
+  background: var(--black);
+  text-align:center;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(255,215,0,0.2);
+  border:2px solid var(--gold);
+  transition: transform 0.4s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.card h3 { color: var(--gold); }
+.card p { padding:0 15px 20px; color: var(--white); }
+.card .link { display:inline-block; margin-bottom:20px; color: var(--gold); text-decoration:none; font-weight:600; }
+.card .link:hover { color: var(--white); }
+
+/* FOOTER */
+.site-footer {
+  background: linear-gradient(var(--dark-overlay), var(--dark-overlay)), 
+              url('https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/58918c476245ef4de632bcabdd286896e14f8b7b/images/paramount%20chief.jpg?raw=true') center/cover no-repeat;
+  color: var(--white);
+  text-align:center;
+  padding:40px 0;
   backdrop-filter: blur(4px);
 }
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
 
-    .footer-logo {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 2px solid var(--gold);
-    }
+.footer-logo { width:60px; height:60px; border-radius:50%; border:2px solid var(--gold); margin-bottom:10px; }
 
-    .footer-right a {
-      color: var(--gold);
-      text-decoration: none;
-      font-weight: 600;
-    }
+.footer-right a { color: var(--gold); text-decoration:none; font-weight:600; }
+.footer-right a:hover { color: var(--white); }
 
-    #backToTop {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: var(--gold);
-      color: var(--royal-blue);
-      border: none;
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      font-size: 22px;
-      cursor: pointer;
-      display: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      transition: 0.3s;
-    }
+/* BACK TO TOP */
+#backToTop {
+  position: fixed;
+  bottom:25px;
+  right:25px;
+  background: var(--gold);
+  color: var(--black);
+  border:none;
+  border-radius:50%;
+  width:45px; height:45px;
+  font-size:22px;
+  cursor:pointer;
+  display:none;
+  box-shadow:0 0 10px rgba(255,215,0,0.4);
+  transition:0.3s;
+}
 
-    #backToTop:hover {
-      background: var(--white);
-    }
-  </style>
+#backToTop:hover { background: var(--white); }
+</style>
 </head>
-<body>
 
- <!-- HEADER -->
+<body>
 <header class="site-header">
-  <div class="container header-inner" style="text-align:center; margin-top:10px;">
-    <a href="index.html" class="brand">
-      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" 
-           alt="Bowiri Logo" 
-           style="width:56px; height:56px; border-radius:8px; object-fit:cover;">
-      <span class="brand-text" style="display:block; font-weight:bold; font-size:1.3em; margin-top:5px;">Bowiri Traditional Council</span>
-    </a>
-  </div>
+  <a href="index.html" class="brand">
+    <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo">
+    <span class="brand-text">Bowiri Traditional Council</span>
+  </a>
 </header>
 
-<!-- Horizontal Navigation Bar under Logo -->
-<nav id="page-nav" style="text-align:center; margin-top:10px;">
-  <ul style="list-style:none; padding:0; margin:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px;">
-<li><a href="index.html" class="nav-link">Home</a></li>
-<li><a href="leadership.html" class="nav-link">Leadership</a></li>
-<li><a href="events.html" class="nav-link">Events</a></li>
-<li><a href="projects.html" class="nav-link">Projects</a></li>
-<li><a href="about.html" class="nav-link">About</a></li>
-<li><a href="contact.html" class="nav-link">Contact</a></li>
+<nav id="page-nav">
+  <ul>
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+    <li><a href="events.html" class="nav-link">Events</a></li>
+    <li><a href="projects.html" class="nav-link">Projects</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
   </ul>
 </nav>
 
-<!-- Styles for navigation links -->
-<style>
-  #page-nav .nav-link {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    background: linear-gradient(to right, #FFD700, #FF4500); /* Royal gold to red */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: transform 0.2s, opacity 0.2s;
-  }
+<section class="hero">
+  <h2>Welcome to the Bowiri Traditional Council</h2>
+  <p>Discover our rich heritage and meet our esteemed leaders.</p>
+  <a href="leadership.html" class="btn">Explore Leadership →</a>
+</section>
 
-  #page-nav .nav-link:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
+<section class="highlights">
+  <article class="card">
+    <h3>Latest Enstoolment</h3>
+    <p>Newly enstooled chiefs bringing fresh vision to Bowiri leadership.</p>
+    <a href="leadership.html" class="link">View Leadership →</a>
+  </article>
 
-  /* Responsive adjustments */
-  @media (max-width: 600px) {
-    #page-nav ul {
-      gap: 10px;
-    }
-    #page-nav .nav-link {
-      font-size: 0.9em;
-    }
-  }
-</style>
-  
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Welcome to the Bowiri Traditional Council</h2>
-    <p>Discover our rich heritage and meet our esteemed leaders.</p>
-    <a href="leadership.html" class="btn">Explore Leadership →</a>
-  </section>
+  <article class="card">
+    <h3>Yam Festival</h3>
+    <p>Celebrating unity and harvest. The upcoming festival honours tradition and growth.</p>
+    <a href="projects.html" class="link">Festival & Projects →</a>
+  </article>
 
-  <!-- HIGHLIGHTS -->
-  <section class="highlights">
-    <article class="card">
-      <h3>Latest Enstoolment</h3>
-      <p>Newly enstooled chiefs bringing fresh vision to Bowiri leadership.</p>
-      <a href="leadership.html" class="link">View Leadership →</a>
-    </article>
+  <article class="card">
+    <h3>Community Initiatives</h3>
+    <p>Education, infrastructure, and cultural renewal — our mission continues.</p>
+    <a href="projects.html" class="link">Support the Work →</a>
+  </article>
+</section>
 
-    <article class="card">
-      <h3>Yam Festival</h3>
-      <p>Celebrating unity and harvest. The upcoming festival honours tradition and growth.</p>
-      <a href="projects.html" class="link">Festival & Projects →</a>
-    </article>
+<footer class="site-footer">
+  <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo" class="footer-logo">
+  <p>© <span id="year"></span> Bowiri Traditional Council — All Rights Reserved.</p>
+  <div class="footer-right">
+    <p>Designed by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
+  </div>
+</footer>
 
-    <article class="card">
-      <h3>Community Initiatives</h3>
-      <p>Education, infrastructure, and cultural renewal — our mission continues.</p>
-      <a href="projects.html" class="link">Support the Work →</a>
-    </article>
-  </section>
+<button id="backToTop">↑</button>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo" class="footer-logo">
-      <p>© <span id="year"></span> Bowiri Traditional Council — All Rights Reserved.</p>
-      <div class="footer-right">
-        <p>Designed by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <button id="backToTop">↑</button>
-
-  <script>
-    // Toggle mobile nav
-    document.getElementById("nav-toggle").addEventListener("click", function () {
-      document.getElementById("main-nav").classList.toggle("active");
-    });
-
-    // Back to top
-    const backToTop = document.getElementById("backToTop");
-    window.onscroll = function () {
-      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
-    };
-    backToTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    // Year update
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
-</body>
-  <!-- Back to Top Button -->
-<button id="back-to-top" title="Back to Top">↑</button>
-
-<!-- Styles -->
-<style>
-  #back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 100;
-    background-color: #FFD700; /* Royal gold */
-    color: #8B0000; /* Dark red */
-    border: none;
-    padding: 12px 16px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    transition: transform 0.3s, opacity 0.3s;
-    opacity: 0;
-    pointer-events: none; /* initially hidden */
-  }
-
-  #back-to-top:hover {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-</style>
-
-<!-- Script -->
 <script>
-  // Show/hide button on scroll
-  const backToTop = document.getElementById("back-to-top");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      backToTop.style.opacity = "1";
-      backToTop.style.pointerEvents = "auto";
-    } else {
-      backToTop.style.opacity = "0";
-      backToTop.style.pointerEvents = "none";
-    }
-  });
-
-  // Scroll to top on click
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+});
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top:0, behavior:'smooth' });
+});
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
+</body>
 </html>
