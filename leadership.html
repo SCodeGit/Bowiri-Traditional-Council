@@ -1,218 +1,75 @@
 <!doctype html>
 <html lang="en">
 <head>
+ <style>
+/* --- Universal Override Styles --- */
+
+body {
+  background: #000 !important;
+  color: #fff !important;
+  font-family: "Times New Roman", serif !important;
+  text-align: justify;
+}
+
+/* Headings in Royal Gold */
+h1, h2, h3, h4, .title, .section-title {
+  color: #d4af37 !important;
+}
+
+/* Paragraphs and normal text in white */
+p, li, span, a, div {
+  color: #ffffff !important;
+}
+
+/* Links */
+a {
+  color: #d4af37 !important;
+}
+
+/* Cards */
+.card, .info-box, .profile-card, .content-box, .leaders-card, .event-card {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #d4af37 !important;
+  border-radius: 10px !important;
+  padding: 15px !important;
+  box-shadow: 0 0 15px rgba(212,175,55,0.3) !important;
+}
+
+/* Images inside cards */
+.card img, 
+.info-box img, 
+.profile-card img, 
+.content-box img, 
+.leaders-card img {
+  border: 2px solid #d4af37 !important;
+  border-radius: 10px !important;
+}
+
+/* Navigation bar */
+header, nav {
+  background: #000 !important;
+  border-bottom: 1px solid #d4af37 !important;
+}
+
+header .brand-text,
+nav a {
+  color: #d4af37 !important;
+}
+
+/* Mobile Justify */
+@media (max-width: 600px) {
+  body {
+    text-align: justify !important;
+  }
+}
+</style>
+ 
   <link rel="stylesheet" href="style.css">
   <!-- Favicon for desktop and mobile -->
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png" sizes="32x32">
 <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 
-<!-- Optional: make it circular with royal gold/red border for modern browsers -->
-<!-- ===== Dark & Royal Theme Styles ===== -->
-<style>
-/* Root Colors */
-:root {
-  --dark-bg: #0a0f0f;
-  --card-bg: #1a1f21;
-  --gold: #FFD700;
-  --red-accent: #a71d2a;
-  --text-light: #f5f5f5;
-  --text-muted: #bbbbbb;
-  --shadow-dark: rgba(0,0,0,0.6);
-  --radius: 12px;
-}
-
-/* Body & General Text */
-body, html {
-  background-color: var(--dark-bg) !important;
-  color: var(--text-light) !important;
-  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
-
-/* Headings and links */
-h1,h2,h3,h4,h5,h6,p,span,li,a {
-  color: var(--gold) !important;
-}
-a {
-  color: var(--gold);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--text-light);
-}
-
-/* Header */
-.site-header {
-  background: linear-gradient(90deg, rgba(10,15,15,0.95), rgba(10,15,15,0.97));
-  color: var(--text-light);
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-.brand-text {
-  color: var(--gold);
-  font-weight: bold;
-}
-
-/* Navigation */
-#page-nav ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-#page-nav a {
-  font-weight: bold;
-  font-size: 1.1em;
-  background: linear-gradient(to right, var(--gold), #FF4500);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: transform 0.2s, opacity 0.2s;
-}
-#page-nav a:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
-/* Main content */
-.page-main {
-  max-width: 1100px;
-  margin: 28px auto;
-  padding: 0 18px 80px;
-}
-
-/* Leader grid & cards */
-.leaders-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px 10px;
-}
-.leader-card {
-  background-color: var(--card-bg) !important;
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: 0 8px 20px var(--shadow-dark);
-  border: 1px solid rgba(255,215,0,0.2);
-  color: var(--text-light);
-  overflow: visible;
-}
-
-/* Portrait frame & hover */
-.portrait-frame {
-  width: 100%;
-  max-width: 220px;
-  margin: 0 auto 14px;
-  border-radius: 8px;
-  padding: 10px;
-  background: linear-gradient(180deg, rgba(255,215,0,0.08), rgba(255,215,0,0.02));
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-  cursor: pointer;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.portrait-frame img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 10px 25px var(--shadow-dark);
-}
-.portrait-frame:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 15px 35px var(--shadow-dark);
-}
-
-/* Leader meta */
-.leader-meta {
-  text-align: center;
-  margin-bottom: 10px;
-}
-.leader-meta h3 { color: var(--gold); }
-.leader-meta .title { color: var(--text-muted); }
-
-/* Bio */
-.bio-wrap { font-size: 15px; color: var(--text-muted); background: transparent; }
-.bio-content {
-  overflow: hidden;
-  transition: max-height 0.45s cubic-bezier(.2,.9,.2,1), opacity 0.3s;
-  max-height: 220px;
-  opacity: 1;
-  position: relative;
-}
-.bio-content.expanded { max-height: 2000px; }
-.bio-fade {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 48px;
-  background: linear-gradient(0deg, var(--card-bg), rgba(255,255,255,0));
-  pointer-events: none;
-  display: block;
-}
-.bio-content.expanded + .bio-fade { display: none; }
-.read-toggle {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: transparent;
-  color: var(--gold);
-  border: 1px solid rgba(255,215,0,0.2);
-  cursor: pointer;
-  font-weight: 600;
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 60px;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  overflow: auto;
-  background-color: rgba(10,15,15,0.95);
-}
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 80%;
-  max-height: 80%;
-  border-radius: 8px;
-  animation: zoom 0.3s;
-}
-@keyframes zoom { from { transform: scale(0); } to { transform: scale(1); } }
-#caption {
-  text-align: center;
-  color: var(--text-light);
-  padding: 10px;
-  font-size: 18px;
-}
-.close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: var(--red-accent);
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-.close:hover { color: #ff4c4c; }
-
-/* Responsive */
-@media (max-width: 768px){
-  .leaders-grid { gap: 16px; padding: 20px 5px; }
-  .portrait-frame { max-width: 45%; margin-bottom: 16px; }
-  #caption { font-size: 16px; }
-}
 </style>
 
 <!-- ===== JavaScript ===== -->
