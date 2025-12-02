@@ -264,6 +264,29 @@ nav a {
 </header>
 
 <!-- Horizontal Navigation Bar under Logo -->
+<style>
+/* NAV text + colors */
+#page-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: 0.25s ease-in-out;
+}
+
+/* Hover gold */
+#page-nav a:hover {
+  color: #FFD700;
+}
+
+/* Active gold */
+#page-nav a.active {
+  color: #FFD700;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 3px;
+}
+</style>
+
 <nav id="page-nav" style="text-align:center; margin-top:10px;">
   <ul style="list-style:none; padding:0; margin:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px;">
     <li><a href="index.html">Home</a></li> 
@@ -274,9 +297,6 @@ nav a {
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
-  </ul>
-</nav>
-
 <!-- Styles for navigation links -->
 <style>
   #page-nav .nav-link {
@@ -288,7 +308,6 @@ nav a {
     -webkit-text-fill-color: transparent;
     transition: transform 0.2s, opacity 0.2s;
   }
-
   #page-nav .nav-link:hover {
     transform: scale(1.1);
     opacity: 0.8;
@@ -304,18 +323,14 @@ nav a {
     }
   }
 </style>
-
-
 <!-- =======================
      Leadership Page Header
      (Embedded + Modern Style)
 ========================= -->
-
 <style>
 /* ----------------------------------------------
    PAGE HEADER — Sleek Modern Black/White/Gold
 ---------------------------------------------- */
-
 .page-header {
   text-align: center;
   margin: 60px auto 40px;
@@ -340,23 +355,19 @@ nav a {
   line-height: 1.6;
   opacity: 0.9;
 }
-
 /* MOBILE — justify text for professional reading */
 @media (max-width: 600px) {
   .page-header {
     padding: 10px 15px;
   }
-
   .page-header p {
     text-align: justify;
     font-size: 1rem;
   }
-
   .page-header h1 {
     font-size: 1.9rem;
   }
 }
-
 /* Fade animation */
 .page-header {
   animation: fadeIn 0.8s ease-out;
@@ -366,7 +377,6 @@ nav a {
   to { opacity: 1; transform: translateY(0); }
 }
 </style>
-
 <main class="page-main container">
   <section class="page-header">
     <h1>Leadership</h1>
@@ -374,10 +384,8 @@ nav a {
   </section>
 </main>
 </style>
-
 <section class="page-content">
   <div class="leaders-grid">
-
 <!-- Leader Card -->
 <article class="leader-card animate" data-anim>
   <!-- Portrait Frame with Clickable Modal -->
@@ -388,7 +396,6 @@ nav a {
       onclick="openModal(this)" 
     />
   </div>
-
   <!-- Leader Info -->
   <div class="leader-meta">
     <h3>Nana Osiadieyor Kwabena Salo V</h3>
