@@ -13,9 +13,175 @@
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 
-  <!-- Global CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Embedded CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      background: #f7f8fa;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    /* Header */
+    .site-header {
+      background: #ffffff;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .brand img {
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    #page-nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    #page-nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+
+    #page-nav a:hover,
+    #page-nav .active {
+      color: #6a1b1b;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      padding: 60px 5% 30px;
+    }
+
+    .page-header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    /* Content Block */
+    .content-block {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 0;
+      text-align: justify;
+    }
+
+    .content-block h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      font-family: Poppins, sans-serif;
+    }
+
+    .contact-form button {
+      background: #6a1b1b;
+      color: #fff;
+      padding: 14px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #4d1313;
+    }
+
+    /* Contact Details */
+    .contact-details {
+      margin-top: 30px;
+      line-height: 1.8;
+    }
+
+    .contact-details h3 {
+      margin-top: 30px;
+      font-family: "Playfair Display", serif;
+    }
+
+    /* Footer */
+    .site-footer {
+      text-align: center;
+      padding: 30px 5%;
+      background: #111;
+      color: #ccc;
+      margin-top: 40px;
+    }
+
+    .site-footer img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .site-footer a {
+      color: #d4b395;
+      text-decoration: none;
+    }
+
+    /* Back to TOP */
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #6a1b1b;
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #back-to-top:hover {
+      background: #4d1313;
+    }
+  </style>
 </head>
+
 <body>
 
 <header class="site-header">
@@ -43,7 +209,7 @@
 
   <section class="content-block">
     <h2>Contact the Palace</h2>
-    <p>For enquiries, donations, or appointments, use the form or the contact details below.</p>
+    <p>For enquiries, donations, or appointments, kindly use the contact form or reach us directly through the details provided below.</p>
 
     <form id="contact-form" class="contact-form">
       <label for="name">Full Name</label>
@@ -63,8 +229,10 @@
       <p>P. O. Box 123, Bowiri</p>
       <p>Email: <a href="mailto:info@bowiri.org">info@bowiri.org</a></p>
       <p>Phone: +233 20 000 0000</p>
+
       <h3>Location</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.910174679781!2d-0.1969!3d5.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102079d564bc8e8f%3A0x4639b825f17ecf7e!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1694700000000!5m2!1sen!2sgh" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.910174679781!2d-0.1969!3d5.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102079d564bc8e8f%3A0x4639b825f17ecf7e!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1694700000000!5m2!1sen!2sgh"
+        width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
     </div>
   </section>
 </main>
@@ -79,7 +247,18 @@
 
 <button id="back-to-top">↑</button>
 
-<!-- Global JS -->
-<script src="js/main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const scrollBtn = document.getElementById("back-to-top");
+  window.addEventListener("scroll", () => {
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
 </body>
 </html>
