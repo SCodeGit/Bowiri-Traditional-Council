@@ -3,14 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home — Bowiri Traditional Council</title>
-<meta name="description" content="Bowiri Traditional Council — heritage, leadership, projects and community support.">
-<!-- Basic SEO -->
+
 <title>Bowiri Traditional Council | Chiefs & Queen Mothers of Volta Region</title>
 <meta name="description" content="Nana Osiadieyor Kwabena Salo V, Paramount Chief of Bowiri, and chiefs and queen mothers of Bowiri Traditional Area in Ghana’s Volta Region.">
 <meta name="keywords" content="Bowiri Traditional Council, Bowiri chiefs, Paramount Chief Nana Osiadieyor Kwabena Salo V, Volta Region Ghana, Queen Mothers, Traditional Leadership Ghana">
 
-<!-- Open Graph (Facebook & LinkedIn) -->
+<!-- Open Graph -->
 <meta property="og:title" content="Bowiri Traditional Council Leadership">
 <meta property="og:description" content="Discover the chiefs and queen mothers leading the Bowiri Traditional Area in Ghana’s Volta Region.">
 <meta property="og:url" content="https://bowiritraditionalarea23.com/index.html">
@@ -23,54 +21,44 @@
 <meta name="twitter:description" content="Paramount Chief Nana Osiadieyor Kwabena Salo V and Bowiri chiefs leading the Volta Region.">
 <meta name="twitter:image" content="https://bowiritraditionalarea23.com/images/leadership.jpg">
 
-<!-- Schema Markup for Leadership -->
+<!-- Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Bowiri Traditional Council",
-  "url": "https://bowiritraditionalarea23.com",
-  "member": [
-    { "@type": "Person", "name": "Nana Osiadieyor Kwabena Salo V", "jobTitle": "Paramount Chief (Bowirimanhene)" },
-    { "@type": "Person", "name": "Nana Kwasi Asiedu II", "jobTitle": "Sub-Divisional Chief (Ankobehene)" },
-    { "@type": "Person", "name": "Nana Yaa Sikebea II", "jobTitle": "Kyidomhemaa (Divisional Queenmother)" },
-    { "@type": "Person", "name": "Nana Abornubea Atoanepe I", "jobTitle": "Asafohemaa of Bowiri-Kwamekrom" },
-    { "@type": "Person", "name": "Nana Kwasi Okyerefor III", "jobTitle": "Tufuhene" },
-    { "@type": "Person", "name": "Nana Yaa Asiedua I", "jobTitle": "Queenmother" },
-    { "@type": "Person", "name": "Nana Kwasi Sike II", "jobTitle": "Kyidomhene" },
-    { "@type": "Person", "name": "Nana Kwasi Asantey II", "jobTitle": "Gyasehene" }
-  ]
+  "url": "https://bowiritraditionalarea23.com"
 }
 </script>
+
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
-<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/28857d96cf2048e159e3a22335a78a7f13cf84a6/king%20logo.png">
 
 <style>
 :root {
-  --black: #000000;
-  --white: #ffffff;
-  --gold: #FFD700;
-  --dark-overlay: rgba(0,0,0,0.7);
+  --black:#000;
+  --white:#fff;
+  --gold:#FFD700;
+  --dark-overlay:rgba(0,0,0,0.7);
 }
 
 body {
   margin:0;
   font-family:'Poppins', sans-serif;
-  background-color: var(--black);
-  color: var(--white);
+  background:var(--black);
+  color:var(--white);
 }
 
 /* HEADER */
 .site-header {
-  background: var(--black);
-  border-bottom: 2px solid var(--gold);
+  background:var(--black);
+  border-bottom:2px solid var(--gold);
   padding:10px 0;
   text-align:center;
-  position: sticky;
+  position:sticky;
   top:0;
   z-index:1000;
 }
@@ -79,7 +67,7 @@ body {
   display:inline-flex;
   align-items:center;
   text-decoration:none;
-  color: var(--white);
+  color:var(--white);
 }
 
 .brand img {
@@ -92,140 +80,103 @@ body {
 
 .brand-text {
   font-family:'Playfair Display', serif;
-  font-weight:700;
   font-size:1.3rem;
-  color: var(--white);
+  font-weight:700;
 }
 
-/* NAVIGATION */
+/* NAV */
 #page-nav ul {
   list-style:none;
   padding:0;
   margin:10px 0;
   display:flex;
   justify-content:center;
-  flex-wrap:wrap;
   gap:20px;
+  flex-wrap:wrap;
 }
 
-#page-nav .nav-link {
-  font-weight:bold;
-  font-size:1.1em;
+#page-nav a {
+  color:var(--white);
   text-decoration:none;
-  color: var(--white);
-  transition: transform 0.2s, color 0.2s;
+  font-weight:600;
 }
 
-#page-nav .nav-link:hover {
-  color: var(--gold);
-  transform: scale(1.1);
-}
-
-@media (max-width:600px){
-  #page-nav ul { gap:10px; }
-  #page-nav .nav-link { font-size:0.9em; }
+#page-nav a:hover {
+  color:var(--gold);
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(var(--dark-overlay), var(--dark-overlay)),
-              url('https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/c8785628133990450c61b99be05ec715831f3915/king%20V%202.jpg?raw=true') center/cover no-repeat;
+  background:linear-gradient(var(--dark-overlay),var(--dark-overlay)),
+  url('https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/c8785628133990450c61b99be05ec715831f3915/king%20V%202.jpg?raw=true') center/cover no-repeat;
   text-align:center;
   padding:120px 20px;
-  border-radius:10px;
 }
 
 .hero h2 {
   font-family:'Playfair Display', serif;
-  font-size:2.2rem;
-  margin-bottom:10px;
-  color: var(--white);
+  font-size:2.3rem;
 }
 
 .hero p {
+  color:#ddd;
   font-size:1.1rem;
-  margin-bottom:25px;
-  color: #ddd;
 }
 
-.hero a.btn {
+.hero .btn {
   display:inline-block;
+  margin-top:20px;
   padding:12px 28px;
-  background-color: var(--gold);
-  color: var(--black);
+  background:var(--gold);
+  color:var(--black);
   border-radius:30px;
-  font-weight:600;
   text-decoration:none;
-  transition:0.3s;
+  font-weight:600;
 }
 
-.hero a.btn:hover {
-  background-color: var(--white);
-  color: var(--black);
-}
-
-/* HIGHLIGHT CARDS */
+/* HIGHLIGHTS */
 .highlights {
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
   gap:20px;
   padding:60px 5%;
 }
 
 .card {
-  background: var(--black);
-  text-align:center;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 4px 15px rgba(255,215,0,0.2);
   border:2px solid var(--gold);
-  transition: transform 0.4s;
+  border-radius:12px;
+  text-align:center;
+  padding-bottom:20px;
 }
 
-.card:hover { transform: translateY(-5px); }
+.card h3 {
+  color:var(--gold);
+}
 
-.card h3 { color: var(--gold); }
-.card p { padding:0 15px 20px; color: var(--white); }
-.card .link { display:inline-block; margin-bottom:20px; color: var(--gold); text-decoration:none; font-weight:600; }
-.card .link:hover { color: var(--white); }
+/* NEW YEAR IMAGE */
+.newyear-king-img {
+  width:180px;
+  border-radius:50%;
+  border:3px solid var(--gold);
+  margin:25px auto 15px;
+  display:block;
+}
+
+@media(max-width:600px){
+  .newyear-king-img { width:120px; }
+}
 
 /* FOOTER */
 .site-footer {
-  background: linear-gradient(var(--dark-overlay), var(--dark-overlay)), 
-              url('https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/58918c476245ef4de632bcabdd286896e14f8b7b/images/paramount%20chief.jpg?raw=true') center/cover no-repeat;
-  color: var(--white);
   text-align:center;
   padding:40px 0;
-  backdrop-filter: blur(4px);
+  border-top:2px solid var(--gold);
 }
-
-.footer-logo { width:60px; height:60px; border-radius:50%; border:2px solid var(--gold); margin-bottom:10px; }
-
-.footer-right a { color: var(--gold); text-decoration:none; font-weight:600; }
-.footer-right a:hover { color: var(--white); }
-
-/* BACK TO TOP */
-#backToTop {
-  position: fixed;
-  bottom:25px;
-  right:25px;
-  background: var(--gold);
-  color: var(--black);
-  border:none;
-  border-radius:50%;
-  width:45px; height:45px;
-  font-size:22px;
-  cursor:pointer;
-  display:none;
-  box-shadow:0 0 10px rgba(255,215,0,0.4);
-  transition:0.3s;
-}
-
-#backToTop:hover { background: var(--white); }
 </style>
 </head>
 
 <body>
+
 <header class="site-header">
   <a href="index.html" class="brand">
     <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo">
@@ -235,18 +186,25 @@ body {
 
 <nav id="page-nav">
   <ul>
-    <li><a href="index.html" class="nav-link">Home</a></li>
-    <li><a href="leadership.html" class="nav-link">Leadership</a></li>
-    <li><a href="events.html" class="nav-link">Events</a></li>
-    <li><a href="projects.html" class="nav-link">Projects</a></li>
-    <li><a href="about.html" class="nav-link">About</a></li>
-    <li><a href="contact.html" class="nav-link">Contact</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
-  <h2>Welcome to the Bowiri Traditional Council</h2>
-  <section class="highlights">
-  <article class="card" style="grid-column: 1 / -1;">
 
+<!-- WELCOME FIRST -->
+<section class="hero">
+  <h2>Welcome to the Bowiri Traditional Council</h2>
+  <p>Discover our rich heritage and meet our esteemed leaders.</p>
+  <a href="leadership.html" class="btn">Explore Leadership →</a>
+</section>
+
+<!-- KING MESSAGE SECOND -->
+<section class="highlights">
+  <article class="card" style="grid-column:1/-1;">
     <img src="https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/c8785628133990450c61b99be05ec715831f3915/king%20V%202.jpg?raw=true"
          alt="Nana Osiadieyor Kwabena Salo V"
          class="newyear-king-img">
@@ -255,85 +213,41 @@ body {
 
     <p>
       As we step into the New Year 2026, I extend warm greetings and heartfelt blessings
-      to all sons and daughters of the Bowiri Traditional Area, both at home and abroad.
+      to all sons and daughters of the Bowiri Traditional Area.
     </p>
 
-    <p>
-      May this year bring peace, unity, and development to our land. Together,
-      let us uphold our traditions and work diligently for the progress of Bowiri
-      and future generations.
-    </p>
-
-    <p style="color:#FFD700;font-weight:600;">
+    <p style="color:var(--gold);font-weight:600;">
       Nana Osiadieyor Kwabena Salo V<br>
       <span style="color:#fff;font-weight:400;">Paramount Chief (Bowirimanhene)</span>
     </p>
-
   </article>
 </section>
 
-<style>
-/* Responsive New Year Image */
-.newyear-king-img {
-  width: 180px;
-  max-width: 80%;
-  height: auto;
-  border-radius: 50%;
-  border: 3px solid #FFD700;
-  margin: 25px auto 15px;
-  display: block;
-}
-
-/* Phone optimization */
-@media (max-width: 600px) {
-  .newyear-king-img {
-    width: 120px;
-  }
-}
-</style>
-  <p>Discover our rich heritage and meet our esteemed leaders.</p>
-  <a href="leadership.html" class="btn">Explore Leadership →</a>
-</section>
-
+<!-- LEADERSHIP / PROJECTS -->
 <section class="highlights">
   <article class="card">
     <h3>Latest Enstoolment</h3>
     <p>Newly enstooled chiefs bringing fresh vision to Bowiri leadership.</p>
-    <a href="leadership.html" class="link">View Leadership →</a>
   </article>
 
   <article class="card">
     <h3>Yam Festival</h3>
-    <p>Celebrating unity and harvest. The upcoming festival honours tradition and growth.</p>
-    <a href="projects.html" class="link">Festival & Projects →</a>
+    <p>Celebrating unity and harvest.</p>
   </article>
 
   <article class="card">
     <h3>Community Initiatives</h3>
-    <p>Education, infrastructure, and cultural renewal — our mission continues.</p>
-    <a href="projects.html" class="link">Support the Work →</a>
+    <p>Education, infrastructure, and cultural renewal.</p>
   </article>
 </section>
 
 <footer class="site-footer">
-  <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo" class="footer-logo">
-  <p>© <span id="year"></span> Bowiri Traditional Council — All Rights Reserved.</p>
-  <div class="footer-right">
-    <p>Designed by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
-  </div>
+  <p>© <span id="year"></span> Bowiri Traditional Council</p>
 </footer>
 
-<button id="backToTop">↑</button>
-
 <script>
-const backToTop = document.getElementById("backToTop");
-window.addEventListener("scroll", () => {
-  backToTop.style.display = window.scrollY > 300 ? "block" : "none";
-});
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top:0, behavior:'smooth' });
-});
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
