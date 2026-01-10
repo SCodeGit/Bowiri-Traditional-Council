@@ -17,19 +17,6 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bowiri Traditional Council Leadership">
-<meta name="twitter:description" content="Paramount Chief Nana Osiadieyor Kwabena Salo V and Bowiri chiefs leading the Volta Region.">
-<meta name="twitter:image" content="https://bowiritraditionalarea23.com/images/leadership.jpg">
-
-<!-- Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Bowiri Traditional Council",
-  "url": "https://bowiritraditionalarea23.com"
-}
-</script>
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -153,17 +140,35 @@ body {
   color:var(--gold);
 }
 
-/* NEW YEAR IMAGE */
-.newyear-king-img {
-  width:180px;
-  border-radius:50%;
-  border:3px solid var(--gold);
-  margin:25px auto 15px;
-  display:block;
+/* ========================= */
+/* 🔥 CMS SECTION STYLING 🔥 */
+/* ========================= */
+.cms-posts {
+  padding:60px 5%;
 }
 
-@media(max-width:600px){
-  .newyear-king-img { width:120px; }
+.cms-post {
+  border-left:5px solid var(--gold);
+  background:#111;
+  padding:20px;
+  margin-bottom:25px;
+  border-radius:8px;
+}
+
+.cms-post h3 {
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+.cms-post p {
+  line-height:1.7;
+  color:#ddd;
+}
+
+.cms-date {
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:8px;
 }
 
 /* FOOTER */
@@ -179,7 +184,7 @@ body {
 
 <header class="site-header">
   <a href="index.html" class="brand">
-    <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg" alt="Bowiri Logo">
+    <img src="https://raw.githubusercontent.com/SCodeGit/Bowiri-Traditional-Council/9cf17011bc9b1cd47d129aa5a704b5be84767d0b/images/king%20logo.jpg">
     <span class="brand-text">Bowiri Traditional Council</span>
   </a>
 </header>
@@ -195,65 +200,48 @@ body {
   </ul>
 </nav>
 
-<!-- WELCOME FIRST -->
 <section class="hero">
   <h2>Welcome to the Bowiri Traditional Council</h2>
   <p>Discover our rich heritage and meet our esteemed leaders.</p>
   <a href="leadership.html" class="btn">Explore Leadership →</a>
 </section>
 
-<!-- KING MESSAGE SECOND -->
-<section class="highlights">
-  <article class="card" style="grid-column:1/-1;">
-    <img src="https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/c8785628133990450c61b99be05ec715831f3915/king%20V%202.jpg?raw=true"
-         alt="Nana Osiadieyor Kwabena Salo V"
-         class="newyear-king-img">
-
-    <h3>New Year Message from the Paramount Chief – 2026</h3>
-
-    <p>
-      As we step into the New Year 2026, I extend warm greetings and heartfelt blessings
-      to all sons and daughters of the Bowiri Traditional Area.
-    </p>
-
-    <p style="color:var(--gold);font-weight:600;">
-      Nana Osiadieyor Kwabena Salo V<br>
-      <span style="color:#fff;font-weight:400;">Paramount Chief (Bowirimanhene)</span>
-    </p>
-  </article>
+<!-- ✅ CMS CONTENT SECTION (AUTO-UPDATES FROM CMS) -->
+<section class="cms-posts">
+  <h2 style="text-align:center;color:var(--gold);">Official Announcements</h2>
+  <div id="cms-content"></div>
 </section>
 
-<!-- LEADERSHIP / PROJECTS -->
-<section class="highlights">
-  <article class="card">
-    <h3>Latest Enstoolment</h3>
-    <p>Newly enstooled chiefs bringing fresh vision to Bowiri leadership.</p>
-  </article>
-
-  <article class="card">
-    <h3>Yam Festival</h3>
-    <p>Celebrating unity and harvest.</p>
-  </article>
-
-  <article class="card">
-    <h3>Community Initiatives</h3>
-    <p>Education, infrastructure, and cultural renewal.</p>
-  </article>
-</section>
-
-<footer class="site-footer" style="background-image: linear-gradient(rgba(4,6,12,0.65), rgba(4,6,12,0.85)), url('https://github.com/SCodeGit/Bowiri-Traditional-Council/blob/115080848fa3181504d9bca39d51337b7cc72438/images/paramount%20chief.jpg'); background-size: cover; background-position: center;">
-  <div class="container footer-inner reveal">
-    <div class="footer-left">
-      <div class="logo-sm">Bowiri</div>
-      <p>© <span id="year"></span> Bowiri Traditional Council — All rights reserved.</p>
-    </div>
-    <div class="footer-right">
-      <p>Designed by <a href="https://scodegit.github.io/scode.git.io/" target="_blank" rel="noopener">SCode Studio</a></p>
-    </div>
-  </div>
+<footer class="site-footer">
+  <p>© <span id="year"></span> Bowiri Traditional Council</p>
 </footer>
+
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* 🔥 CMS FETCH SCRIPT (READ-ONLY) */
+const SITE_CODE = "SCode01";
+fetch(`https://scode-cms.onrender.com/api/public/posts?siteCode=${SITE_CODE}`)
+  .then(res => res.json())
+  .then(posts => {
+    const container = document.getElementById("cms-content");
+    if (!posts.length) {
+      container.innerHTML = "<p style='text-align:center;'>No announcements yet.</p>";
+      return;
+    }
+    posts.forEach(p => {
+      container.innerHTML += `
+        <div class="cms-post">
+          <div class="cms-date">${new Date(p.createdAt).toLocaleDateString()}</div>
+          <h3>${p.title}</h3>
+          <p>${p.content}</p>
+        </div>`;
+    });
+  })
+  .catch(() => {
+    document.getElementById("cms-content").innerHTML =
+      "<p style='color:red;text-align:center;'>Unable to load updates.</p>";
+  });
 </script>
 
 </body>
